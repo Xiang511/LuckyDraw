@@ -13,8 +13,8 @@
         }
 
         .forum-header {
-            background: linear-gradient(135deg, #5b94ff 0%, #fb91ff 100%);
-            color: white;
+            background: linear-gradient(135deg, #000000 0%, #C0C0C0 100%);
+            color: #D4AF37;
             padding: 2rem 0;
             margin-bottom: 2rem;
         }
@@ -26,7 +26,7 @@
 
         .forum-card {
             background: white;
-            border: 1px solid #dee2e6;
+            border: 1px solid #e2dfdf;
             border-radius: 8px;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
@@ -61,8 +61,8 @@
         .forum-tag {
             display: inline-block;
             padding: 0.25rem 0.75rem;
-            background-color: #e7f3ff;
-            color: #5b94ff;
+            background-color: #000000;
+            color: #D4AF37;
             border-radius: 20px;
             font-size: 0.75rem;
             margin-right: 0.5rem;
@@ -73,36 +73,52 @@
             display: flex;
             gap: 1.5rem;
             font-size: 0.875rem;
-            color: #6c757d;
+            color: #D4AF37;
         }
 
         .forum-actions a {
-            color: #5b94ff;
+            color: #333;
             text-decoration: none;
             cursor: pointer;
         }
 
         .forum-actions a:hover {
-            color: #fb91ff;
-            text-decoration: underline;
+            color: #D4AF37;
         }
 
         .btn-new-topic {
-            background: linear-gradient(135deg, #5b94ff 0%, #fb91ff 100%);
-            color: white;
+            background: #000000;
+            color: #D4AF37;
             border: none;
             padding: 0.75rem 1.5rem;
             border-radius: 6px;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.3s ease;
+
         }
 
         .btn-new-topic:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-            color: white;
+            box-shadow: 0 4px 12px #000000;
             text-decoration: none;
+        }
+
+        .forum-header a {
+            color: #D4AF37;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .forum-header a:hover {
+            color: #D4AF37;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -111,6 +127,7 @@
     <!-- Header -->
     <div class="forum-header">
         <div class="container">
+            <a href="#" class="back-to-index">← 首頁</a>
             <h1>盲盒討論區</h1>
             <p class="mb-0">分享盲盒開箱、交流收藏、尋找夢幻款</p>
         </div>
@@ -120,10 +137,10 @@
     <div class="container">
         <!-- Action Bar -->
         <div class="row mb-4">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <input type="text" class="form-control" placeholder="搜尋盲盒主題...">
             </div>
-            <div class="col-md-6 text-end">
+            <div class="col-md-4 text-end">
                 <button class="btn-new-topic">+ 發表新主題</button>
             </div>
         </div>
@@ -132,7 +149,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <!-- Topic 1 -->
-                <div class="forum-card">
+                <div class="forum-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <div class="forum-title">最新款盲盒開箱分享！</div>
                     <div class="forum-meta">
                         <strong>小王</strong> · 2 小時前
@@ -150,7 +167,7 @@
                 </div>
 
                 <!-- Topic 2 -->
-                <div class="forum-card">
+                <div class="forum-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
                     <div class="forum-title">求購：尋找絕版盲盒</div>
                     <div class="forum-meta">
                         <strong>收藏家小李</strong> · 4 小時前
@@ -168,7 +185,7 @@
                 </div>
 
                 <!-- Topic 3 -->
-                <div class="forum-card">
+                <div class="forum-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
                     <div class="forum-title">盲盒收藏展示牆佈置技巧</div>
                     <div class="forum-meta">
                         <strong>室內設計師美美</strong> · 1 天前
@@ -186,7 +203,7 @@
                 </div>
 
                 <!-- Topic 4 -->
-                <div class="forum-card">
+                <div class="forum-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
                     <div class="forum-title">盲盒價格暴漲？該不該入手？</div>
                     <div class="forum-meta">
                         <strong>新手玩家小陳</strong> · 2 天前
@@ -211,15 +228,15 @@
                     <h5 style="font-weight: 600; margin-bottom: 1rem;">🔥 熱門主題</h5>
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #eee;">
-                            <a href="#" style="color: #667eea; text-decoration: none;">最新款盲盒開箱分享！</a>
+                            <a href="#" style="color: #555; text-decoration: none;">最新款盲盒開箱分享！</a>
                             <div style="font-size: 0.75rem; color: #999; margin-top: 0.25rem;">8 回覆</div>
                         </li>
                         <li style="margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #eee;">
-                            <a href="#" style="color: #667eea; text-decoration: none;">盲盒收藏展示牆佈置技巧</a>
+                            <a href="#" style="color: #555; text-decoration: none;">盲盒收藏展示牆佈置技巧</a>
                             <div style="font-size: 0.75rem; color: #999; margin-top: 0.25rem;">34 回覆</div>
                         </li>
                         <li>
-                            <a href="#" style="color: #667eea; text-decoration: none;">盲盒價格暴漲？該不該入手？</a>
+                            <a href="#" style="color: #555; text-decoration: none;">盲盒價格暴漲？該不該入手？</a>
                             <div style="font-size: 0.75rem; color: #999; margin-top: 0.25rem;">45 回覆</div>
                         </li>
                     </ul>
@@ -245,13 +262,133 @@
                     <h5 style="font-weight: 600; margin-bottom: 1rem;">論壇統計</h5>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                         <div>
-                            <div style="font-size: 1.5rem; font-weight: 700; color: #667eea;">2,345</div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: #D4AF37;">2,345</div>
                             <div style="font-size: 0.875rem; color: #999;">總主題數</div>
                         </div>
                         <div>
-                            <div style="font-size: 1.5rem; font-weight: 700; color: #764ba2;">8,901</div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: #f1d475;">8,901</div>
                             <div style="font-size: 0.875rem; color: #999;">總回覆數</div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 1-->
+    <div class="modal fade modal-xl" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">最新款盲盒開箱分享！</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="forum-meta">
+                        <strong>小王</strong> · 2 小時前
+                    </div>
+                    <div class="forum-tag">開箱分享</div>
+                    <div class="forum-tag">新品</div>
+                    <div class="forum-content">
+                        剛買到最新款的限定盲盒，今天終於開箱了！裡面有隱藏款，超開心！有沒有人也買到同款的？
+                        <div class="product-image">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjp47FvM5E5wh01akkQzbZZ6cGjuLvskvXy2r3VEcObGT5V-PQUraY8f2Ys_slSL_5J1pZK_ZJwjmonqhcuLHBD-Dxa3QKdB-2yUc3nPeTtgfjcw2r2ZZ4pwZ9uyqBQ1zd1RfVEqVT4RSDH/s800/present_open.png"
+                                alt="盲盒商品">
+                        </div>
+                    </div>
+                    <div class="forum-actions">
+                        <a href="#">💬 回覆 (8)</a>
+                        <a href="#">❤️ 讚 (24)</a>
+                        <a href="#">📤 分享</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2-->
+    <div class="modal fade modal-xl" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">求購：尋找絕版盲盒</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="forum-meta">
+                        <strong>收藏家小李</strong> · 4 小時前
+                    </div>
+                    <div class="forum-tag">求購</div>
+                    <div class="forum-tag">絕版</div>
+                    <div class="forum-content">
+                        <p>有人手上有 2021 年的限定版嗎？願意高價收購！如果有的話請私訊我，謝謝各位！</p>
+                        <p>我從 2021 年找到現在都 2026 年了還是沒有看到任何相關消息T_T</p>
+                        <p>我的孩子真的很想要那款！拜託廣大網友幫幫忙了！</p>
+                    </div>
+                    <div class="forum-actions">
+                        <a href="#">💬 回覆 (12)</a>
+                        <a href="#">❤️ 讚 (15)</a>
+                        <a href="#">📤 分享</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 3-->
+    <div class="modal fade modal-xl" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">盲盒收藏展示牆佈置技巧</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="forum-meta">
+                        <strong>室內設計師美美</strong> · 1 天前
+                    </div>
+                    <div class="forum-tag">佈置</div>
+                    <div class="forum-tag">收藏</div>
+                    <div class="forum-content">
+                        <p>分享一下我的盲盒展示牆佈置方法，用 LED 燈條和玻璃櫃效果超好！大家可以參考一下～</p>
+                        <img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/3426551048/O1CN01k8AJDu1Jc29IxUwpI_!!4611686018427381000-0-item_pic.jpg_360x360q90.jpg_.webp"
+                            alt="">
+                    </div>
+                    <div class="forum-actions">
+                        <a href="#">💬 回覆 (34)</a>
+                        <a href="#">❤️ 讚 (56)</a>
+                        <a href="#">📤 分享</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 4-->
+    <div class="modal fade modal-xl" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">盲盒價格暴漲？該不該入手？</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="forum-meta">
+                        <strong>新手玩家小陳</strong> · 2 天前
+                    </div>
+                    <div class="forum-tag">討論</div>
+                    <div class="forum-tag">價格</div>
+                    <div class="forum-content">
+                        <p>最近發現很多盲盒價格都漲了，是不是該現在入手還是等等？</p>
+                        <p>有經驗的玩家可以給點建議嗎？推薦今年入坑嗎？</p>
+                        <p>小弟大概 2007 年就很想入坑了，但沒有穩定工作一直不敢入手...</p>
+                        <p>現在有了之後很想試試看，但又聽說廠商品質差異很大，挑不好會虧爛</p>
+                        <p>想請教各位大大有沒有比較推薦的不太會雷的店家，能有好的遊戲體驗？</p>
+                    </div>
+                    <div class="forum-actions">
+                        <a href="#">💬 回覆 (45)</a>
+                        <a href="#">❤️ 讚 (78)</a>
+                        <a href="#">📤 分享</a>
                     </div>
                 </div>
             </div>

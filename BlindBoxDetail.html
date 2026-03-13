@@ -13,14 +13,14 @@
         }
 
         .detail-header {
-            background: linear-gradient(135deg, #5b94ff 0%, #fb91ff 100%);
+            background: linear-gradient(135deg, #000000 0%, #C0C0C0 100%);
             color: white;
             padding: 1rem 0;
             margin-bottom: 2rem;
         }
 
         .detail-header a {
-            color: white;
+            color: #D4AF37;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -46,12 +46,26 @@
             border-radius: 8px;
         }
 
+        .product-image:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(63, 62, 60, 0.4);
+            text-decoration: none;
+            transition: ease 0.3s;
+        }
+
         .product-card {
             background: white;
             border-radius: 12px;
             padding: 2rem;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
+        }
+
+        .product-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(63, 62, 60, 0.4);
+            text-decoration: none;
+            transition: ease 0.3s;
         }
 
         .product-title {
@@ -63,7 +77,7 @@
 
         .product-price {
             font-size: 1.75rem;
-            color: #5b94ff;
+            color: #D4AF37;
             font-weight: bold;
             margin-bottom: 1rem;
         }
@@ -77,7 +91,7 @@
         }
 
         .stars {
-            color: #ffc107;
+            color: #D4AF37;
         }
 
         .product-section {
@@ -89,7 +103,7 @@
             color: #333;
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid #5b94ff;
+            border-bottom: 2px solid #D4AF37;
         }
 
         .product-section p {
@@ -121,7 +135,7 @@
         }
 
         .blind-box-type {
-            background: #f0f0f0;
+            background: #2b2926;
             border: 2px solid transparent;
             border-radius: 8px;
             padding: 1rem;
@@ -131,13 +145,16 @@
         }
 
         .blind-box-type:hover {
-            border-color: #5b94ff;
-            background: #f5f3ff;
+            border-color: #D4AF37;
+            background: #2b2926;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(63, 62, 60, 0.4);
+            text-decoration: none;
         }
 
         .blind-box-type-name {
             font-weight: 600;
-            color: #333;
+            color: #D4AF37;
             margin-bottom: 0.5rem;
         }
 
@@ -153,8 +170,8 @@
         }
 
         .btn-primary-custom {
-            background: linear-gradient(135deg, #5b94ff 0%, #fb91ff 100%);
-            color: white;
+            background: #2b2926;
+            color: #D4AF37;
             border: none;
             padding: 0.75rem 2rem;
             border-radius: 6px;
@@ -166,15 +183,14 @@
 
         .btn-primary-custom:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-            color: white;
+            box-shadow: 0 4px 12px rgba(63, 62, 60, 0.4);
             text-decoration: none;
         }
 
         .btn-secondary-custom {
             background: white;
-            color: #667eea;
-            border: 2px solid #5b94ff;
+            color: #D4AF37;
+            border: 2px solid #D4AF37;
             padding: 0.75rem 2rem;
             border-radius: 6px;
             font-weight: 500;
@@ -184,7 +200,8 @@
         }
 
         .btn-secondary-custom:hover {
-            background: #f5f3ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(63, 62, 60, 0.4);
             text-decoration: none;
         }
 
@@ -193,6 +210,13 @@
             border-radius: 12px;
             padding: 2rem;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .reviews-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(63, 62, 60, 0.4);
+            text-decoration: none;
+            transition: ease 0.3s;
         }
 
         .review-item {
@@ -252,7 +276,7 @@
                     <div class="product-rating">
                         <span class="stars">★★★★★</span>
                         <span>(2,345 評價)</span>
-                        <span style="color: #28a745;">已售出 15,234 件</span>
+                        <span style="color: #7a6d40;">已售出 15,234 件</span>
                     </div>
 
                     <div class="product-section">
@@ -321,8 +345,28 @@
                     </div>
 
                     <div class="action-buttons">
-                        <button class="btn-primary-custom">加入購物車</button>
+                        <button type="button" class="btn-primary-custom" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">加入購物車</button>
                         <button class="btn-secondary-custom">❤️ 收藏</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">您選擇的物品已加入購物車！</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        夢幻系列限定盲盒 NT$ 299
+                        <div class="product-image">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjp47FvM5E5wh01akkQzbZZ6cGjuLvskvXy2r3VEcObGT5V-PQUraY8f2Ys_slSL_5J1pZK_ZJwjmonqhcuLHBD-Dxa3QKdB-2yUc3nPeTtgfjcw2r2ZZ4pwZ9uyqBQ1zd1RfVEqVT4RSDH/s800/present_open.png"
+                                alt="盲盒商品">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -334,7 +378,7 @@
 
             <div class="review-item">
                 <div class="review-author">小王 ★★★★★</div>
-                <div class="review-date">2024 年 3 月 10 日</div>
+                <div class="review-date">2026 年 3 月 10 日</div>
                 <div class="review-content">
                     超級喜歡！開箱就抽到隱藏款，質量也很不錯，包裝精美。強烈推薦給所有盲盒愛好者！
                 </div>
@@ -342,7 +386,7 @@
 
             <div class="review-item">
                 <div class="review-author">美美 ★★★★☆</div>
-                <div class="review-date">2024 年 3 月 8 日</div>
+                <div class="review-date">2026 年 3 月 8 日</div>
                 <div class="review-content">
                     款式很可愛，但是運送有點慢。不過商品本身沒有問題，值得購買。
                 </div>
@@ -350,7 +394,7 @@
 
             <div class="review-item">
                 <div class="review-author">收藏家李 ★★★★★</div>
-                <div class="review-date">2024 年 3 月 5 日</div>
+                <div class="review-date">2026 年 3 月 5 日</div>
                 <div class="review-content">
                     這個系列我已經買了 5 盒，每一盒都有不同的驚喜。這次又抽到新款，完全值得！
                 </div>
