@@ -13,8 +13,35 @@
 
 <body class="d-flex flex-column h-100 ">
   <img class="position-absolute top-0 w-100 z-0" src="img/bg-top.svg" alt="">
-<nav class="my-5 py-5"></nav>
-  <main class="flex-shrink-0 container bg-light rounded-5 my-4 p-4 z-1 mt-5" >
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed top-0 w-100 z-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./img/達摩logo.png" alt="logo" height="30"> | 瞇那賞</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">首頁</a></li>
+          <li class="nav-item"><a class="nav-link " href="LuckyDraw_Ellie_News.html">最新消息</a></li>
+          <li class="nav-item"><a class="nav-link " href="ProductList.html">產品列表</a></li>
+          <li class="nav-item"><a class="nav-link" href="Discusstion.html">盲盒討論區</a></li>
+          <li class="nav-item"><a class="nav-link" href="MemberCenter.html">個人中心</a></li>
+          <li class="nav-item"><a class="nav-link" href="FaqCenter.html">客服</a></li>
+        </ul>
+
+
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-warning" href="#">儲值</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" style="cursor: pointer;">登入</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">註冊</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="flex-shrink-0 container bg-light rounded-5 my-4 p-4 z-1 mt-5" style="margin-top: 90px!important;">
     <!-- 用戶曬單區域 -->
     <section class="py-5 px-2">
       <div class="text-center mb-5">
@@ -28,10 +55,10 @@
           <div class="btn-group" role="group">
             <input type="radio" class="btn-check" name="filter" id="filterAll" checked>
             <label class="btn btn-outline-dark" for="filterAll">全部</label>
-            
+
             <input type="radio" class="btn-check" name="filter" id="filterHighValue">
             <label class="btn btn-outline-dark" for="filterHighValue">高價獎品</label>
-            
+
             <input type="radio" class="btn-check" name="filter" id="filterRecent">
             <label class="btn btn-outline-dark" for="filterRecent">最新曬單</label>
           </div>
@@ -284,7 +311,7 @@
       </div>
     </section>
   </main>
-  
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
