@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,14 +7,78 @@
     /* border: 1px solid red; */
 }
 
-nav li{
+nav li {
     transition: all .5s ease;
 }
-nav li:hover{
+
+nav li:hover {
     background: #94c0f5;
     color: #fff;
     transition: .3s ease;
 }
+
 .navbg {
     background: #282b2c !important;
+}
+
+
+
+/* --- css/style.css --- */
+
+/* 保持你原有的分類按鈕特效和圖片不變形 */
+.category-btn img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* ======================================================== */
+/* --- 自定義登入/註冊按鈕樣式 --- */
+/* ======================================================== */
+
+/* Apple 按鈕 (黑色) */
+.btn-apple {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-apple:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Google 按鈕 (灰色) */
+.btn-google {
+    background-color: #f1f3f4;
+    color: #202124;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-google:hover {
+    background-color: #e8eaed;
+}
+
+/* 電子郵件註冊按鈕 (紅色) */
+.btn-email-register {
+    background-color: #ce0018;
+    /* 配合圖片的深紅色 */
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-email-register:hover {
+    background-color: #a80013;
+}
+
+/* 密碼輸入框樣式調整 */
+.input-group .form-control#password {
+    border-right: none;
+}
+
+.input-group-text#togglePassword {
+    border-left: none;
+    background-color: white;
 }
