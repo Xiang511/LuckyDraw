@@ -1,29 +1,39 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard Template</title>
+  <title>後台管理 - 商品管理</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <style>
+    /* 讓表格內的圖片預覽保持方形且不變形 */
+    .table-img-preview {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 
-<body class="vh-100 ">
+<body class="vh-100">
   <div class="row d-flex w-100 m-0 flex-nowrap overflow-x-hidden overflow-y-auto">
-    <div class="row vh-100 d-none col-md-4 col-lg-3 col-xl-2 d-xl-flex m-0  p-0 " id="nav">
-      <nav class="navbg border p-0 flex-shrink-0 border-0">
+
+    <div class="row vh-100 d-none col-md-4 col-lg-3 col-xl-2 d-xl-flex m-0 p-0" id="nav">
+      <nav class="navbg border p-0 flex-shrink-0 border-0 h-100">
         <div class="py-3 mt-3 w-100">
           <div class="d-flex justify-content-center align-items-center">
-            <img src="https://picsum.photos/id/492/150/150" alt="">
+            <img src="https://picsum.photos/id/492/150/150" class="rounded-circle" alt="logo"
+              style="width: 100px; height: 100px;">
           </div>
-          <ul class="text-white fs-4 w-100 d-flex flex-column justify-content-center gap-3 mt-5 p-0">
+          <ul class="text-white fs-5 w-100 d-flex flex-column justify-content-center gap-2 mt-4 p-0 list-unstyled">
             <a class="text-decoration-none text-white" href="#">
-              <li class="text-center p-3"><i class="bi bi-person-circle me-3"></i>會員管理</li>
+              <li class="text-center p-3 hover-bg"><i class="bi bi-person-circle me-3"></i>會員管理</li>
             </a>
-            <a class="text-decoration-none text-white" href="#">
+            <a class="text-decoration-none text-white bg-secondary bg-opacity-50" href="#">
               <li class="text-center p-3"><i class="bi bi-box-seam me-3"></i>商品管理</li>
             </a>
             <a class="text-decoration-none text-white" href="#">
@@ -42,49 +52,264 @@
         </div>
       </nav>
     </div>
-    <div class="text-black col-12 col-xl-10 p-0 m-0  border-0 position-relative">
-      <div class="d-flex justify-content-between  text-white navbg align-items-center py-1 px-2  top-0 position-fixed  z-1" style="width: inherit;">
+
+    <div class="text-black col-12 col-xl-10 p-0 m-0 border-0 position-relative">
+
+      <div
+        class="d-flex justify-content-between text-white navbg align-items-center py-2 px-3 position-absolute top-0 w-100 z-3">
         <div>
-          <button class="btn text-white d-xl-none" type="button" id="btn">
-            <i class="bi bi-list  fs-4 pe-2"></i>
-          </button>
-          <p class="d-inline-block m-0 fw-bold">後台管理系統</p>
+          <button class="btn text-white d-xl-none" type="button" id="btn"><i class="bi bi-list fs-4 pe-2"></i></button>
+          <h5 class="d-inline-block m-0 fw-bold">後台管理系統</h5>
         </div>
-        <div class="m-0 d-flex align-items-center z-1">
-          <img class="rounded-circle me-3" src="https://picsum.photos/id/701/40/40" alt="">
-          <p class="d-inline-block mt-3 me-2">管理員</p>
-          <button class="btn bg-light rounded-0 ">登出</button>
+        <div class="m-0 d-flex align-items-center">
+          <img class="rounded-circle me-2" src="https://picsum.photos/id/492/30/30" alt="">
+          <span class="d-none d-md-inline-block me-3">管理員</span>
+          <button class="btn btn-sm btn-light rounded-1">登出</button>
         </div>
       </div>
-      <div class="row bg-white p-0 m-0 vh-100 overflow-y-auto">
-        <div class="col-12 p-4 " style="margin-top: 5em; ">
-          <!-- 修改自己的title -->
-          <h2 class="mb-4 fs-1">會員管理</h2>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="請輸入要查詢的內容" aria-label="請輸入要查詢的內容" aria-describedby="button-addon2">
-            <button class="btn btn-outline-secondary z-0" type="button" id="button-addon2">搜尋</button>
+
+      <div class="bg-light p-0 m-0 vh-100 overflow-y-auto">
+        <div class="container-fluid p-4" style="margin-top: 4rem;">
+
+          <h3 class="mb-4 fw-bold"><i class="bi bi-box-seam me-2"></i>商品管理</h3>
+
+          <ul class="nav nav-tabs mb-4" id="productTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active fw-bold" id="blindbox-tab" data-bs-toggle="tab"
+                data-bs-target="#blindbox-pane" type="button" role="tab" aria-selected="true">
+                1. 盲盒系列管理
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link fw-bold" id="items-tab" data-bs-toggle="tab" data-bs-target="#items-pane"
+                type="button" role="tab" aria-selected="false">
+                2. 物品庫管理
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content bg-white p-4 rounded shadow-sm border" id="productTabContent">
+
+            <div class="tab-pane fade show active" id="blindbox-pane" role="tabpanel" aria-labelledby="blindbox-tab">
+              <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBlindBoxModal">
+                  <i class="bi bi-plus-lg"></i> 新增盲盒系列
+                </button>
+                <div class="input-group w-auto">
+                  <input type="text" class="form-control" placeholder="搜尋盲盒名稱...">
+                  <button class="btn btn-outline-secondary" type="button"><i class="bi bi-search"></i></button>
+                </div>
+              </div>
+
+              <div class="table-responsive">
+                <table class="table table-hover align-middle border">
+                  <thead class="table-light">
+                    <tr>
+                      <th>ID</th>
+                      <th>封面圖</th>
+                      <th>盲盒名稱</th>
+                      <th>單抽價格 (Coin)</th>
+                      <th>狀態</th>
+                      <th class="text-end">操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#B001</td>
+                      <td><img src="../image/商品管理.jpg" class="table-img-preview" alt="盲盒圖"></td>
+                      <td>龍工作-光凝 高配版</td>
+                      <td><i class="bi bi-coin text-warning"></i> 500</td>
+                      <td><span class="badge bg-success">上架中</span></td>
+                      <td class="text-end">
+                        <button class="btn btn-sm btn-outline-primary" title="編輯設定"><i
+                            class="bi bi-pencil-square"></i></button>
+                        <button class="btn btn-sm btn-outline-danger" title="刪除"><i class="bi bi-trash3"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>#B002</td>
+                      <td><img src="../image/商品管理.jpg" class="table-img-preview" alt="盲盒圖"></td>
+                      <td>POPMART 泡泡瑪特 隱藏版</td>
+                      <td><i class="bi bi-coin text-warning"></i> 150</td>
+                      <td><span class="badge bg-secondary">已下架</span></td>
+                      <td class="text-end">
+                        <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil-square"></i></button>
+                        <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash3"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="items-pane" role="tabpanel" aria-labelledby="items-tab">
+              <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addItemModal">
+                  <i class="bi bi-plus-lg"></i> 新增庫存物品
+                </button>
+                <div class="d-flex gap-2">
+                  <select class="form-select w-auto">
+                    <option selected>全部盲盒系列</option>
+                    <option value="1">龍工作-光凝 高配版</option>
+                    <option value="2">POPMART 泡泡瑪特</option>
+                  </select>
+                  <select class="form-select w-auto">
+                    <option selected>所有稀有度</option>
+                    <option value="SSR">SSR (隱藏/大賞)</option>
+                    <option value="SR">SR (高級)</option>
+                    <option value="R">R (普通)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="table-responsive">
+                <table class="table table-hover align-middle border">
+                  <thead class="table-light">
+                    <tr>
+                      <th>ID</th>
+                      <th>物品圖</th>
+                      <th>物品名稱</th>
+                      <th>所屬盲盒</th>
+                      <th>稀有度</th>
+                      <th>抽出機率</th>
+                      <th>庫存剩餘</th>
+                      <th class="text-end">操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#I1001</td>
+                      <td><img src="../image/商品管理.jpg" class="table-img-preview" alt="物品圖"></td>
+                      <td>光凝 隱藏異色款公仔</td>
+                      <td>龍工作-光凝 高配版</td>
+                      <td><span class="badge bg-danger">SSR</span></td>
+                      <td>1.5%</td>
+                      <td><span class="text-danger fw-bold">2</span></td>
+                      <td class="text-end">
+                        <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil-square"></i></button>
+                        <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash3"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>#I1002</td>
+                      <td><img src="../image/商品管理.jpg" class="table-img-preview" alt="物品圖"></td>
+                      <td>光凝 經典武器配件包</td>
+                      <td>龍工作-光凝 高配版</td>
+                      <td><span class="badge bg-primary">R</span></td>
+                      <td>40.0%</td>
+                      <td>150</td>
+                      <td class="text-end">
+                        <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil-square"></i></button>
+                        <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash3"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
           </div>
-          <!-- 這裡可以放你的東西 以下範例-->
-          <!-- <div class="row">
-            <div class="col-12">content</div>
-          </div> -->
         </div>
-        <!-- 這裡可以放你的東西 以下範例-->
-        <!-- <div class="row">
-          <div class="col-12">lorem</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="addBlindBoxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">新增/編輯盲盒系列</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="row">
-          <div class="col-12">lorem</div>
-        </div> <div class="row">
-          <div class="col-12">lorem</div>
-        </div> -->
-       
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">盲盒名稱</label>
+              <input type="text" class="form-control" placeholder="輸入盲盒標題">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">上傳封面圖片</label>
+              <input class="form-control" type="file" accept="image/*">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">單次抽獎價格 (Coin)</label>
+              <input type="number" class="form-control" placeholder="例如: 500">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">上架狀態</label>
+              <select class="form-select">
+                <option value="1">立即上架</option>
+                <option value="0">暫時下架 (草稿)</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary">儲存設定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="addItemModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">新增/編輯物品與機率</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">物品名稱</label>
+              <input type="text" class="form-control" placeholder="輸入物品名稱">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">物品圖片</label>
+              <input class="form-control" type="file" accept="image/*">
+            </div>
+            <div class="row mb-3">
+              <div class="col-6">
+                <label class="form-label">所屬盲盒系列</label>
+                <select class="form-select">
+                  <option selected disabled>請選擇...</option>
+                  <option value="1">龍工作-光凝 高配版</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="form-label">稀有度標籤</label>
+                <select class="form-select">
+                  <option value="SSR">SSR (極度稀有)</option>
+                  <option value="SR">SR (稀有)</option>
+                  <option value="R">R (普通)</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-6">
+                <label class="form-label">抽出機率 (%)</label>
+                <input type="number" step="0.01" class="form-control" placeholder="例如: 1.5">
+              </div>
+              <div class="col-6">
+                <label class="form-label">總庫存量 (個)</label>
+                <input type="number" class="form-control" placeholder="輸入數量">
+              </div>
+            </div>
+            <div class="alert alert-warning py-2 small mb-0">
+              <i class="bi bi-info-circle"></i> 提示：同一盲盒系列下的所有物品，其抽出機率總和建議設定為 100%。
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-success">儲存物品</button>
+        </div>
       </div>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
 </body>
 
 </html>
