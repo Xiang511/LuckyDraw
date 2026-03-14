@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>訂單管理系統</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body class="vh-100 ">
+  <div class="row d-flex w-100 m-0 flex-nowrap overflow-x-hidden overflow-y-auto">
+    <div class="row vh-100 d-none col-md-4 col-lg-3 col-xl-2 d-xl-flex m-0  p-0 " id="nav">
+      <nav class="navbg border p-0 flex-shrink-0 border-0">
+        <div class="py-3 mt-3 w-100">
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="https://picsum.photos/id/492/150/150" alt="">
+          </div>
+          <ul class="text-white fs-4 w-100 d-flex flex-column justify-content-center gap-3 mt-5 p-0">
+            <a class="text-decoration-none text-white" href="#">
+              <li class="text-center p-3"><i class="bi bi-person-circle me-3"></i>會員管理</li>
+            </a>
+            <a class="text-decoration-none text-white" href="#">
+              <li class="text-center p-3"><i class="bi bi-box-seam me-3"></i>商品管理</li>
+            </a>
+            <a class="text-decoration-none text-white" href="#">
+              <li class="text-center p-3"><i class="bi bi-card-checklist me-3"></i>訂單管理</li>
+            </a>
+            <a class="text-decoration-none text-white" href="#">
+              <li class="text-center p-3"><i class="bi bi-percent me-3"></i>數據統計</li>
+            </a>
+            <a class="text-decoration-none text-white" href="#">
+              <li class="text-center p-3"><i class="bi bi-columns me-3"></i>活動促銷</li>
+            </a>
+            <a class="text-decoration-none text-white" href="#">
+              <li class="text-center p-3"><i class="bi bi-gear me-3"></i>系統設定</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="text-black col-12 col-xl-10 p-0 m-0  border-0 position-relative">
+      <div
+        class="d-flex justify-content-between  text-white navbg align-items-center py-1 px-2  top-0 position-fixed  z-1"
+        style="width: inherit;">
+        <div>
+          <button class="btn text-white d-xl-none" type="button" id="btn">
+            <i class="bi bi-list  fs-4 pe-2"></i>
+          </button>
+          <p class="d-inline-block m-0 fw-bold">後台管理系統</p>
+        </div>
+        <div class="m-0 d-flex align-items-center z-1">
+          <img class="rounded-circle me-3" src="https://picsum.photos/id/701/40/40" alt="">
+          <p class="d-inline-block mt-3 me-2">管理員</p>
+          <button class="btn bg-light rounded-0 ">登出</button>
+        </div>
+      </div>
+      <div class="row bg-white p-0 m-0 vh-100 overflow-y-auto">
+        <div class="col-12 p-4 " style="margin-top: 5em; ">
+          <!-- 修改自己的title -->
+          <h2 class="mb-4 fs-1">訂單管理</h2>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="請輸入要查詢的內容" aria-label="請輸入要查詢的內容"
+              aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary z-0" type="button" id="button-addon2">搜尋</button>
+          </div>
+          <main class="flex-shrink-0 container">
+            <div class="container">
+              <table class="table table-striped table-hover">
+                <!-- Table欄位名稱 -->
+                <thead>
+                  <tr>
+                    <th scope="col">訂單編號</th>
+                    <th scope="col">會員名字</th>
+                    <th scope="col">會員電話</th>
+                    <th scope="col">會員地址</th>
+                    <th scope="col">訂單金額</th>
+                    <th scope="col">支付方式</th>
+                    <th scope="col">下單時間</th>
+                    <th scope="col">訂單變更</th>
+                  </tr>
+                </thead>
+                <!-- Table內容 -->
+                <tbody>
+                  <tr>
+                    <td>ORD20240311001</td>
+                    <td>王小明</td>
+                    <td>0912345678</td>
+                    <td>台北市信義區忠孝東路1段1號</td>
+                    <td>1500</td>
+                    <td>信用卡</td>
+                    <td>2024-03-11 10:00:00</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#editModal">編輯</button>
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#delete">刪除</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ORD20240311002</td>
+                    <td>陳美麗</td>
+                    <td>0923456789</td>
+                    <td>新北市板橋區文化路2段2號</td>
+                    <td>2800</td>
+                    <td>LINE Pay</td>
+                    <td>2024-03-11 11:30:00</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#editModal">編輯</button>
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#delete">刪除</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ORD20240311003</td>
+                    <td>林大華</td>
+                    <td>0934567890</td>
+                    <td>台中市西屯區台灣大道3段3號</td>
+                    <td>500</td>
+                    <td>貨到付款</td>
+                    <td>2024-03-11 14:15:00</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#editModal">編輯</button>
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#delete">刪除</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ORD20240311004</td>
+                    <td>張志強</td>
+                    <td>0945678901</td>
+                    <td>桃園市中壢區中正路4段4號</td>
+                    <td>1200</td>
+                    <td>街口支付</td>
+                    <td>2024-03-11 15:45:00</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#editModal">編輯</button>
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#delete">刪除</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ORD20240311005</td>
+                    <td>李小芬</td>
+                    <td>0956789012</td>
+                    <td>台南市東區大學路5段5號</td>
+                    <td>3500</td>
+                    <td>信用卡</td>
+                    <td>2024-03-11 16:20:00</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#editModal">編輯</button>
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#delete">刪除</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ORD20240311006</td>
+                    <td>趙建國</td>
+                    <td>0967890123</td>
+                    <td>高雄市苓雅區成功路6段6號</td>
+                    <td>900</td>
+                    <td>Apple Pay</td>
+                    <td>2024-03-11 17:10:00</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#editModal">編輯</button>
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#delete">刪除</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ORD20240311007</td>
+                    <td>孫淑惠</td>
+                    <td>0978901234</td>
+                    <td>新竹市東區光復路7段7號</td>
+                    <td>2100</td>
+                    <td>貨到付款</td>
+                    <td>2024-03-11 18:05:00</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#editModal">編輯</button>
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#delete">刪除</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ORD20240311008</td>
+                    <td>周杰倫</td>
+                    <td>0989012345</td>
+                    <td>基隆市仁愛區愛三路8段8號</td>
+                    <td>4500</td>
+                    <td>信用卡</td>
+                    <td>2024-03-11 19:30:00</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#editModal">編輯</button>
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#delete">刪除</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ORD20240311009</td>
+                    <td>吳宗憲</td>
+                    <td>0990123456</td>
+                    <td>屏東縣屏東市民生路9段9號</td>
+                    <td>1800</td>
+                    <td>LINE Pay</td>
+                    <td>2024-03-11 20:15:00</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#editModal">編輯</button>
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#delete">刪除</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ORD20240311010</td>
+                    <td>蔡依林</td>
+                    <td>0901234567</td>
+                    <td>宜蘭縣宜蘭市中山路10段10號</td>
+                    <td>3200</td>
+                    <td>街口支付</td>
+                    <td>2024-03-11 21:40:00</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#editModal">編輯</button>
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#delete">刪除</button>
+                    </td>
+                  </tr>
+                </tbody>
+                <!-- Modal 編輯 -->
+                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="editModalLabel">編輯訂單內容</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">會員名字:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                          </div>
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">會員電話:</label>
+                            <input type="text" class="form-control" id="message-text">
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">確定</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">取消</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal 刪除 -->
+                <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="deleteLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="deleteLabel">訂單變更</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        確定刪除此欄位?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">確定</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">取消</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </table>
+            </div>
+          </main>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

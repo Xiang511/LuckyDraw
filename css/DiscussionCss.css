@@ -1,0 +1,113 @@
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .forum-header {
+            background: linear-gradient(135deg, #000000 0%, #C0C0C0 100%);
+            color: #D4AF37;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .forum-header h1 {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .forum-card {
+            background: white;
+            border: 1px solid #e2dfdf;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .forum-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .forum-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .forum-meta {
+            font-size: 0.875rem;
+            color: #6c757d;
+            margin-bottom: 1rem;
+        }
+
+        .forum-content {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .forum-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: #000000;
+            color: #D4AF37;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .forum-actions {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.875rem;
+            color: #D4AF37;
+        }
+
+        .forum-actions a {
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .forum-actions a:hover {
+            color: #D4AF37;
+        }
+
+        .btn-new-topic {
+            background: #000000;
+            color: #D4AF37;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+        }
+
+        .btn-new-topic:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px #000000;
+            text-decoration: none;
+        }
+
+        .forum-header a {
+            color: #D4AF37;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .forum-header a:hover {
+            color: #D4AF37;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: underline;
+        }
