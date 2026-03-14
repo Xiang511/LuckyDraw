@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>用戶曬單</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/share.css">
+</head>
+
+<body class="d-flex flex-column h-100 ">
+  <img class="position-absolute top-0 w-100 z-0" src="img/bg-top.svg" alt="">
+<nav class="my-5 py-5"></nav>
+  <main class="flex-shrink-0 container bg-light rounded-5 my-4 p-4 z-1 mt-5" >
+    <!-- 用戶曬單區域 -->
+    <section class="py-5 px-2">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">用戶曬單</h2>
+        <p class="text-muted">看看其他用戶的中獎分享</p>
+      </div>
+
+      <!-- 篩選和排序 -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="btn-group" role="group">
+            <input type="radio" class="btn-check" name="filter" id="filterAll" checked>
+            <label class="btn btn-outline-dark" for="filterAll">全部</label>
+            
+            <input type="radio" class="btn-check" name="filter" id="filterHighValue">
+            <label class="btn btn-outline-dark" for="filterHighValue">高價獎品</label>
+            
+            <input type="radio" class="btn-check" name="filter" id="filterRecent">
+            <label class="btn btn-outline-dark" for="filterRecent">最新曬單</label>
+          </div>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+          <select class="form-select d-inline-block w-auto">
+            <option selected>排序方式</option>
+            <option value="1">最新發布</option>
+            <option value="2">最多按讚</option>
+            <option value="3">最高評分</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- 曬單卡片 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/id/180/400/300" class="card-img-top" alt="獎品照片">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://picsum.photos/id/64/50/50" class="rounded-circle me-2" alt="用戶頭像" style="width: 40px; height: 40px;">
+                <div>
+                  <h6 class="mb-0">王小明</h6>
+                  <small class="text-muted">2 小時前</small>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="badge bg-success">iPhone 15 Pro</span>
+              </div>
+              <div class="mb-2">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p class="card-text">太幸運了！第一次參加就中獎，手機已經收到了，包裝完整，真的是正品！感謝平台！</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm btn-outline-danger">
+                  <i class="bi bi-heart"></i> 128
+                </button>
+                <button class="btn btn-sm btn-outline-secondary">
+                  <i class="bi bi-chat-dots"></i> 23
+                </button>
+                <button class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-share"></i> 分享
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 曬單卡片 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/id/48/400/300" class="card-img-top" alt="獎品照片">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://picsum.photos/id/338/50/50" class="rounded-circle me-2" alt="用戶頭像" style="width: 40px; height: 40px;">
+                <div>
+                  <h6 class="mb-0">李佳琪</h6>
+                  <small class="text-muted">5 小時前</small>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="badge bg-primary">Dyson 吹風機</span>
+              </div>
+              <div class="mb-2">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star text-warning"></i>
+              </div>
+              <p class="card-text">抽中吹風機好開心！用了幾天，頭髮變得很柔順，出貨速度也很快，推薦大家來參加抽獎活動！</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm btn-outline-danger">
+                  <i class="bi bi-heart"></i> 256
+                </button>
+                <button class="btn btn-sm btn-outline-secondary">
+                  <i class="bi bi-chat-dots"></i> 45
+                </button>
+                <button class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-share"></i> 分享
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 曬單卡片 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/id/367/400/300" class="card-img-top" alt="獎品照片">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://picsum.photos/id/65/50/50" class="rounded-circle me-2" alt="用戶頭像" style="width: 40px; height: 40px;">
+                <div>
+                  <h6 class="mb-0">張偉強</h6>
+                  <small class="text-muted">1 天前</small>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="badge bg-info text-dark">Sony PS5</span>
+              </div>
+              <div class="mb-2">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p class="card-text">夢寐以求的 PS5 終於到手了！包裝完整，全新未拆封，已經玩了幾款遊戲，超級流暢！</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm btn-outline-danger">
+                  <i class="bi bi-heart"></i> 342
+                </button>
+                <button class="btn btn-sm btn-outline-secondary">
+                  <i class="bi bi-chat-dots"></i> 67
+                </button>
+                <button class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-share"></i> 分享
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 曬單卡片 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/id/119/400/300" class="card-img-top" alt="獎品照片">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://picsum.photos/id/91/50/50" class="rounded-circle me-2" alt="用戶頭像" style="width: 40px; height: 40px;">
+                <div>
+                  <h6 class="mb-0">陳美玲</h6>
+                  <small class="text-muted">2 天前</small>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="badge bg-warning text-dark">Apple Watch</span>
+              </div>
+              <div class="mb-2">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+              </div>
+              <p class="card-text">收到 Apple Watch 了！功能很齊全，戴起來很舒服，健康監測功能特別實用，很滿意這次的中獎！</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm btn-outline-danger">
+                  <i class="bi bi-heart"></i> 189
+                </button>
+                <button class="btn btn-sm btn-outline-secondary">
+                  <i class="bi bi-chat-dots"></i> 34
+                </button>
+                <button class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-share"></i> 分享
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 曬單卡片 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/id/159/400/300" class="card-img-top" alt="獎品照片">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://picsum.photos/id/342/50/50" class="rounded-circle me-2" alt="用戶頭像" style="width: 40px; height: 40px;">
+                <div>
+                  <h6 class="mb-0">林志豪</h6>
+                  <small class="text-muted">3 天前</small>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="badge bg-danger">Switch OLED</span>
+              </div>
+              <div class="mb-2">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p class="card-text">抽到 Switch OLED 版本真是太幸運了！螢幕效果真的很棒，全家都很喜歡，感謝這個平台！</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm btn-outline-danger">
+                  <i class="bi bi-heart"></i> 421
+                </button>
+                <button class="btn btn-sm btn-outline-secondary">
+                  <i class="bi bi-chat-dots"></i> 89
+                </button>
+                <button class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-share"></i> 分享
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 曬單卡片 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/id/201/400/300" class="card-img-top" alt="獎品照片">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://picsum.photos/id/399/50/50" class="rounded-circle me-2" alt="用戶頭像" style="width: 40px; height: 40px;">
+                <div>
+                  <h6 class="mb-0">黃淑芬</h6>
+                  <small class="text-muted">4 天前</small>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span class="badge bg-secondary">AirPods Pro</span>
+              </div>
+              <div class="mb-2">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star text-warning"></i>
+              </div>
+              <p class="card-text">降噪效果超級好！音質也很棒，通勤時使用非常方便，很開心能抽到這個獎品！</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm btn-outline-danger">
+                  <i class="bi bi-heart"></i> 276
+                </button>
+                <button class="btn btn-sm btn-outline-secondary">
+                  <i class="bi bi-chat-dots"></i> 52
+                </button>
+                <button class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-share"></i> 分享
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 載入更多按鈕 -->
+      <div class="text-center mt-5">
+        <button class="btn btn-dark btn-lg">
+          <i class="bi bi-arrow-down-circle me-2"></i>載入更多曬單
+        </button>
+      </div>
+    </section>
+  </main>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
