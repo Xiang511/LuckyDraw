@@ -8,37 +8,19 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <style>
+    body{
+      background: #081324;
+    }
+  </style>
 </head>
 
-<body class="d-flex flex-column h-100">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-        </ul>
-        <span class="navbar-text">
-          這是測試 Nav
-        </span>
-      </div>
-    </div>
-  </nav>
-
-  <main class="flex-shrink-0 container">
+<body class="d-flex flex-column h-100 ">
+  <img class="position-absolute top-0 w-100 z-0" src="img/bg-top.svg" alt="">
+<nav class="my-5 py-5"></nav>
+  <main class="flex-shrink-0 container bg-light rounded-5 my-4 p-4 z-1 mt-5" >
     <!-- 用戶曬單區域 -->
-    <section class="py-5">
+    <section class="py-5 px-2">
       <div class="text-center mb-5">
         <h2 class="fw-bold">用戶曬單</h2>
         <p class="text-muted">看看其他用戶的中獎分享</p>
@@ -49,13 +31,13 @@
         <div class="col-md-6">
           <div class="btn-group" role="group">
             <input type="radio" class="btn-check" name="filter" id="filterAll" checked>
-            <label class="btn btn-outline-primary" for="filterAll">全部</label>
+            <label class="btn btn-outline-dark" for="filterAll">全部</label>
             
             <input type="radio" class="btn-check" name="filter" id="filterHighValue">
-            <label class="btn btn-outline-primary" for="filterHighValue">高價獎品</label>
+            <label class="btn btn-outline-dark" for="filterHighValue">高價獎品</label>
             
             <input type="radio" class="btn-check" name="filter" id="filterRecent">
-            <label class="btn btn-outline-primary" for="filterRecent">最新曬單</label>
+            <label class="btn btn-outline-dark" for="filterRecent">最新曬單</label>
           </div>
         </div>
         <div class="col-md-6 text-md-end mt-3 mt-md-0">
@@ -300,19 +282,13 @@
 
       <!-- 載入更多按鈕 -->
       <div class="text-center mt-5">
-        <button class="btn btn-primary btn-lg">
+        <button class="btn btn-dark btn-lg">
           <i class="bi bi-arrow-down-circle me-2"></i>載入更多曬單
         </button>
       </div>
     </section>
   </main>
   
-  <footer class="bg-light text-center text-lg-start mt-auto">
-    <div class="text-center p-3 text-black">
-      © 2026 Copyright:
-      <a class="text-dark" href="#">bootstrap小專題</a>
-    </div>
-  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
