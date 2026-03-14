@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付系統</title>
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+    <style>
+        /* 使body=瀏覽器高度 */
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background-color: darkslategrey;
+
+        }
+
+        /* ====== */
+
+        /* ====== */
+
+        .layout {
+            border-radius: 30px;
+        }
+
+        .icon {
+            color: rgb(97, 61, 228);
+        }
+
+        .sidebar {
+            border-radius: 15px;
+            background-color: lightgray;
+        }
+
+        .mainContent {
+            border-radius: 15px;
+            border: 1px solid grey;
+        }
+
+        /* ====== */
+
+        /* ===麵包屑=== */
+        .breadcrumb-item.active {
+            color: cadetblue;
+            font-weight: bolder;
+        }
+
+        .breadcrumb-item a {
+            color: darkblue;
+            text-decoration: none;
+        }
+
+        /* 麵包屑的>符號 */
+        .breadcrumb-item+.breadcrumb-item::before {
+            color: cadetblue;
+        }
+
+        /* ====== */
+
+        /* ===sidebar=== */
+        .nav-link {
+            border-radius: 8px;
+
+        }
+
+        .nav-link:hover {
+            background: #f2f2f2;
+        }
+
+        /* ====== */
+    </style>
+</head>
+
+
+<body class="d-flex flex-column h-100">
+
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LuckyDraw</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    這是測試 Nav
+                </span>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="flex-shrink-0 container">
+
+        <!-- 主區塊 -->
+        <div class="layout bg-light p-3 mt-5 mb-3">
+
+            <!-- 標題列+麵包屑 -->
+            <div class="container mb-3">
+                <div class="row">
+                    <!-- 左邊 -->
+                    <div class="col-2">
+                        <!-- 麵包屑 -->
+                        <div class="py-3 mt-2 d-flex justify-content-center align-items-center">
+                            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">支付系統</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- 右邊 -->
+                    <div class="col-8 d-flex p-3">
+                        <!-- 標題圖示 -->
+                        <span class="icon ms-2 pt-2 d-flex justify-content-center ">
+                            <svg width="24" height="24" viewBox="0 0 22 22" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="2" width="6" height="2" />
+                                <rect x="4" y="4" width="2" height="2" />
+                                <rect x="12" y="4" width="2" height="2" />
+                                <rect x="4" y="12" width="2" height="2" />
+                                <rect x="12" y="12" width="2" height="2" />
+                                <rect x="6" y="14" width="6" height="2" />
+                                <rect x="2" y="6" width="2" height="6" />
+                                <rect x="14" y="6" width="2" height="6" />
+                                <rect x="14" y="8" width="4" height="2" />
+                                <rect x="10" y="18" width="2" height="2" />
+                                <rect x="18" y="10" width="2" height="2" />
+                                <rect x="12" y="20" width="2" height="2" />
+                                <rect x="18" y="18" width="2" height="2" />
+                                <rect x="12" y="20" width="6" height="2" />
+                                <rect x="8" y="14" width="2" height="4" />
+                                <rect x="20" y="12" width="2" height="6" />
+                                <rect x="7" y="6" width="4" height="2" />
+                                <rect x="9" y="6" width="2" height="6" />
+                                <rect x="15" y="14" width="2" height="4" />
+                                <rect x="14" y="12" width="3" height="2" />
+                            </svg>
+                        </span>
+                        <!-- 標題 -->
+                        <span class="title fs-4 fw-bolder ms-3">
+                            支付系統
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- layout -->
+            <div class="container">
+                <div class="row g-3">
+
+                    <!-- sidebar -->
+                    <div class="col-2">
+                        <div class="sidebar py-3 d-flex h-100">
+
+                            <ul class="nav flex-column gap-2 w-100">
+
+                                <li class="nav-item">
+                                    <a class="nav-link sidebar-link active w-100" href="#">
+                                        儲值功能
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link sidebar-link w-100" href="#">
+                                        儲值紀錄
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link sidebar-link w-100" href="#">
+                                        消費紀錄
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <!-- mainContent -->
+                    <div class="col-10">
+                        <div class="mainContent p-3 h-100">
+
+                            <!-- 儲值功能 -->
+                            <div id="topup" class="">
+                                <div>
+                                    儲值金額
+                                </div>
+                                <div>
+                                    付款資訊
+                                </div>
+                                <button type="submit">確認</button>
+                            </div>
+
+                            <!-- 儲值紀錄 -->
+                            <div id="topupRecord" class="d-none">
+                                內容 B
+                            </div>
+
+                            <!-- 消費紀錄 -->
+                            <div id="consumeRecord" class="d-none">
+                                內容 C
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+    <footer class="bg-light text-center text-lg-start mt-auto">
+        <div class="text-center p-3 text-black">
+            © 2026 Copyright:
+            <a class="text-dark" href="#">bootstrap小專題</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+
+</html>
