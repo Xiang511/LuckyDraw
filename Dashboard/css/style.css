@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,14 +7,16 @@
     /* border: 1px solid red; */
 }
 
-nav li{
+nav li {
     transition: all .5s ease;
 }
-nav li:hover{
+
+nav li:hover {
     background: #94c0f5;
     color: #fff;
     transition: .3s ease;
 }
+
 .navbg {
     background: #282b2c !important;
 }
