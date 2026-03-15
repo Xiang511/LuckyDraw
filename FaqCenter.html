@@ -2,267 +2,247 @@
 <html lang="zh-TW" class="h-100">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>常見問題 FAQ </title>
-    <link rel="stylesheet" href="./LuckyDraw/Dashboard/css/bing.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="./css/share.css">
-    <style>
-        .category-btn img {
-            width: 45px;
-            height: 45px;
-            object-fit: contain;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>常見問題 FAQ </title>
+  <link rel="stylesheet" href="./LuckyDraw/Dashboard/css/bing.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="./css/share.css">
+  <style>
+    .category-btn img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+    }
 
-        /* 自定義手風琴樣式，模擬參考圖的灰色背景風格 */
-        .custom-accordion .accordion-button {
-            background-color: #e9ecef;
-            /* 預設灰色背景 */
-            color: #212529;
-            font-weight: bold;
-            border-bottom: 1px solid #dee2e6;
-        }
+    /* 自定義手風琴樣式，模擬參考圖的灰色背景風格 */
+    .custom-accordion .accordion-button {
+      background-color: #e9ecef;
+      /* 預設灰色背景 */
+      color: #212529;
+      font-weight: bold;
+      border-bottom: 1px solid #dee2e6;
+    }
 
-        /* 點擊展開後的樣式 */
-        .custom-accordion .accordion-button:not(.collapsed) {
-            background-color: #d6d8db;
-            color: #000;
-            box-shadow: none;
-        }
+    /* 點擊展開後的樣式 */
+    .custom-accordion .accordion-button:not(.collapsed) {
+      background-color: #d6d8db;
+      color: #000;
+      box-shadow: none;
+    }
 
-        /* 移除 Bootstrap 預設的焦點藍色外框 */
-        .custom-accordion .accordion-button:focus {
-            border-color: rgba(0, 0, 0, .125);
-            box-shadow: none;
-        }
-    </style>
+    /* 移除 Bootstrap 預設的焦點藍色外框 */
+    .custom-accordion .accordion-button:focus {
+      border-color: rgba(0, 0, 0, .125);
+      box-shadow: none;
+    }
+  </style>
 </head>
 
 <body class="d-flex flex-column h-100">
-    <img class="position-absolute top-0 w-100 z-0" src="img/bg-top.svg" alt="">
+  <img class="position-absolute top-0 w-100 z-0" src="img/bg-top.svg" alt="">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed top-0 w-100 z-2">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="./img/達摩logo.png" alt="logo" height="30"> | 瞇那賞</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed top-0 w-100 z-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="./img/達摩logo.png" alt="logo" height="30"> | 瞇那賞</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="./index.html">首頁</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./LuckyDraw_Ellie_News.html">最新消息</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./ProductList.html">產品列表</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./Discusstion.html">盲盒討論區</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./MemberCenter.html">個人中心</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="./FaqCenter.html">客服</a></li>
-                </ul>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="./index.html">首頁</a></li>
+          <li class="nav-item"><a class="nav-link" href="./LuckyDraw_Ellie_News.html">最新消息</a></li>
+          <li class="nav-item"><a class="nav-link" href="./ProductList.html">產品列表</a></li>
+          <li class="nav-item"><a class="nav-link" href="./Discusstion.html">盲盒討論區</a></li>
+          <li class="nav-item"><a class="nav-link" href="Share.html">用戶曬單</a></li>
+          <li class="nav-item"><a class="nav-link" href="./MemberCenter.html">個人中心</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./FaqCenter.html">客服</a></li>
+        </ul>
 
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link text-warning" href="#">儲值</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"
-                            style="cursor: pointer;">登入</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal"
-                            data-bs-target="#registerModal">註冊</a></li>
-                </ul>
-            </div>
-        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-warning" href="#">儲值</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" style="cursor: pointer;">登入</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">註冊</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-shrink-0 container z-1 position-relative" style="padding-top: 100px; padding-bottom: 80px;">
+
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb ">
+        <li class="breadcrumb-item "><a href="./index.html" class="text-decoration-none text-secondary text-white">首頁</a>
+        </li>
+        <li class="breadcrumb-item active text-white" aria-current="page">常見問題FAQ</li>
+      </ol>
     </nav>
 
-    <main class="flex-shrink-0 container z-1 position-relative" style="padding-top: 100px; padding-bottom: 80px;">
+    <h3 class="text-center fw-bold mb-5 text-white">常見問題 / FAQ</h3>
 
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb ">
-                <li class="breadcrumb-item "><a href="./index.html"
-                        class="text-decoration-none text-secondary text-white">首頁</a>
-                </li>
-                <li class="breadcrumb-item active text-white" aria-current="page">常見問題FAQ</li>
-            </ol>
-        </nav>
+    <div class="accordion custom-accordion shadow-sm" id="faqAccordion">
 
-        <h3 class="text-center fw-bold mb-5 text-white">常見問題 / FAQ</h3>
-
-        <div class="accordion custom-accordion shadow-sm" id="faqAccordion">
-
-            <div class="accordion-item border-0">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        會員推薦碼的作用
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body text-secondary">
-                        您可以將專屬的「會員推薦碼」分享給好友。當好友使用您的推薦碼成功註冊並完成首次儲值或消費後，您與好友雙方皆可獲得額外的紅利代幣或專屬抽獎券。詳細活動規則請參考最新消息公告。
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item border-0">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        儲值問題
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body text-secondary">
-                        目前本站支援「信用卡/簽帳金融卡」、「LINE Pay」以及「超商代碼繳費」等多種儲值方式。一般情況下，線上支付完成後代幣會在 3-5 分鐘內入帳。若超過 30
-                        分鐘仍未看到代幣，請準備您的付款截圖並聯繫客服。
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item border-0">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        無法進入支付頁面
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body text-secondary">
-                        若您點擊儲值後無法跳轉至綠界或第三方支付頁面，請先檢查您的瀏覽器是否開啟了「阻擋彈出式視窗」功能。建議您嘗試清除瀏覽器 Cookie 或更換使用 Chrome / Safari
-                        瀏覽器再次嘗試。
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item border-0">
-                <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        一番賞與線上盲盒機制
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body text-secondary">
-                        本站採用絕對公平的機率演算系統。每個盲盒系列的庫存總數及各獎項的剩餘數量皆會即時顯示於畫面上。當大賞被抽出後，系統會自動標示。抽中的商品將會自動存入您的「個人中心 > 我的背包」中。
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item border-0">
-                <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        帳號安全與其他
-                    </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body text-secondary">
-                        請務必妥善保管您的帳號密碼，本站客服人員絕對不會主動要求您提供密碼。若您懷疑帳號遭到盜用，請立即透過官方 LINE 聯繫我們進行帳號凍結處理。
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item border-0">
-                <h2 class="accordion-header" id="headingSix">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                        訂單與付款
-                    </button>
-                </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body text-secondary">
-                        抽中商品後，請至「我的背包」勾選欲寄送的物品並建立「發貨訂單」。發貨時需支付相對應的物流運費（視商品材積而定）。您可以選擇合併多項商品一次寄出以節省運費。
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item border-0">
-                <h2 class="accordion-header" id="headingSeven">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                        退貨退款
-                    </button>
-                </h2>
-                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body text-secondary">
-                        因盲盒與一番賞商品具有機率與隨機性，一經扣除代幣進行抽獎後，即無法以「不喜歡」、「抽錯」為由要求退費或退換貨。若收到實體商品時發現有嚴重瑕疵或損壞，請於收到商品 7
-                        日內提供開箱錄影畫面聯繫客服處理。
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item border-0">
-                <h2 class="accordion-header" id="headingEight">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                        寄件物流
-                    </button>
-                </h2>
-                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body text-secondary">
-                        申請發貨並完成運費支付後，倉庫將於 3-5 個工作天內為您打包寄出。我們支援黑貓宅急便與超商取貨（7-11/全家）。商品寄出後，您可以在訂單明細中查看物流追蹤碼。
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item border-0">
-                <h2 class="accordion-header" id="headingNine">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                        收不到簡訊認證碼
-                    </button>
-                </h2>
-                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body text-secondary">
-                        如果您遲遲未收到手機驗證碼，請確認：<br>
-                        1. 手機是否開啟了「阻擋企業/廣告簡訊」的功能。<br>
-                        2. 手機收訊是否良好。<br>
-                        若確認無誤仍無法收到，請稍候 15 分鐘後再次點擊發送，或聯絡您的電信業者查詢。
-                    </div>
-                </div>
-            </div>
-
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            會員推薦碼的作用
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-secondary">
+            您可以將專屬的「會員推薦碼」分享給好友。當好友使用您的推薦碼成功註冊並完成首次儲值或消費後，您與好友雙方皆可獲得額外的紅利代幣或專屬抽獎券。詳細活動規則請參考最新消息公告。
+          </div>
         </div>
-    </main>
+      </div>
 
-    <footer class="bg-dark text-white pt-5 pb-3 mt-auto z-2 position-relative">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <img src="./img/達摩logo.png" alt="logo" height="50" class="mb-3">
-                    <p class="small text-secondary">官方LINE：@iSpan<br>客服信箱：iSapn@gmail.com<br>公司名稱：iSpan工作室</p>
-                </div>
-                <div class="col-md-4 mb-4 d-flex justify-content-md-center">
-                    <ul class="list-unstyled">
-                        <li class=""><a class="nav-link" href="index.html">首頁</a></li>
-                        <li class=""><a class="nav-link" href="LuckyDraw_Ellie_News.html">最新消息</a></li>
-                        <li class=""><a class="nav-link" href="ProductList.html">產品列表</a></li>
-                        <li class=""><a class="nav-link" href="Discusstion.html">盲盒討論區</a></li>
-                        <li class=""><a class="nav-link" href="MemberCenter.html">個人中心</a></li>
-                        <li class=""><a class="nav-link active" href="FaqCenter.html">客服</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-4 text-md-end">
-                    <div class="mb-3">
-                        <i class="bi bi-line fs-3 me-2 text-success"></i>
-                        <i class="bi bi-facebook fs-3 me-2 text-primary"></i>
-                        <i class="bi bi-instagram fs-3 text-danger"></i>
-                    </div>
-                    <p class="small text-secondary mt-3">© 2026 Copyright 版權所有</p>
-                </div>
-            </div>
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            儲值問題
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-secondary">
+            目前本站支援「信用卡/簽帳金融卡」、「LINE Pay」以及「超商代碼繳費」等多種儲值方式。一般情況下，線上支付完成後代幣會在 3-5 分鐘內入帳。若超過 30
+            分鐘仍未看到代幣，請準備您的付款截圖並聯繫客服。
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            無法進入支付頁面
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-secondary">
+            若您點擊儲值後無法跳轉至綠界或第三方支付頁面，請先檢查您的瀏覽器是否開啟了「阻擋彈出式視窗」功能。建議您嘗試清除瀏覽器 Cookie 或更換使用 Chrome / Safari
+            瀏覽器再次嘗試。
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            一番賞與線上盲盒機制
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-secondary">
+            本站採用絕對公平的機率演算系統。每個盲盒系列的庫存總數及各獎項的剩餘數量皆會即時顯示於畫面上。當大賞被抽出後，系統會自動標示。抽中的商品將會自動存入您的「個人中心 > 我的背包」中。
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            帳號安全與其他
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-secondary">
+            請務必妥善保管您的帳號密碼，本站客服人員絕對不會主動要求您提供密碼。若您懷疑帳號遭到盜用，請立即透過官方 LINE 聯繫我們進行帳號凍結處理。
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            訂單與付款
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-secondary">
+            抽中商品後，請至「我的背包」勾選欲寄送的物品並建立「發貨訂單」。發貨時需支付相對應的物流運費（視商品材積而定）。您可以選擇合併多項商品一次寄出以節省運費。
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            退貨退款
+          </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-secondary">
+            因盲盒與一番賞商品具有機率與隨機性，一經扣除代幣進行抽獎後，即無法以「不喜歡」、「抽錯」為由要求退費或退換貨。若收到實體商品時發現有嚴重瑕疵或損壞，請於收到商品 7
+            日內提供開箱錄影畫面聯繫客服處理。
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="headingEight">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+            寄件物流
+          </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-secondary">
+            申請發貨並完成運費支付後，倉庫將於 3-5 個工作天內為您打包寄出。我們支援黑貓宅急便與超商取貨（7-11/全家）。商品寄出後，您可以在訂單明細中查看物流追蹤碼。
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="headingNine">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+            收不到簡訊認證碼
+          </button>
+        </h2>
+        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-secondary">
+            如果您遲遲未收到手機驗證碼，請確認：<br>
+            1. 手機是否開啟了「阻擋企業/廣告簡訊」的功能。<br>
+            2. 手機收訊是否良好。<br>
+            若確認無誤仍無法收到，請稍候 15 分鐘後再次點擊發送，或聯絡您的電信業者查詢。
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white pt-5 pb-3 mt-auto z-2 position-relative">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <img src="./img/達摩logo.png" alt="logo" height="50" class="mb-3">
+          <p class="small text-secondary">官方LINE：@iSpan<br>客服信箱：iSapn@gmail.com<br>公司名稱：iSpan工作室</p>
+        </div>
+        <div class="col-md-4 mb-4 d-flex justify-content-md-center">
+          <ul class="list-unstyled">
+            <li class=""><a class="nav-link" href="index.html">首頁</a></li>
+            <li class=""><a class="nav-link" href="LuckyDraw_Ellie_News.html">最新消息</a></li>
+            <li class=""><a class="nav-link" href="ProductList.html">產品列表</a></li>
+            <li class=""><a class="nav-link" href="Discusstion.html">盲盒討論區</a></li>
+            <li class=""><a class="nav-link" href="MemberCenter.html">個人中心</a></li>
+            <li class=""><a class="nav-link active" href="FaqCenter.html">客服</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4 text-md-end">
+          <div class="mb-3">
+            <i class="bi bi-line fs-3 me-2 text-success"></i>
+            <i class="bi bi-facebook fs-3 me-2 text-primary"></i>
+            <i class="bi bi-instagram fs-3 text-danger"></i>
+          </div>
+          <p class="small text-secondary mt-3">© 2026 Copyright 版權所有</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
