@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>最新消息</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <!-- slick -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="./css/Ellie_News.css">
+
+
+</head>
+
+
+<body class="d-flex flex-column h-100">
+  <img class="position-absolute top-0 w-100 z-0" src="img/bg-top.svg" alt="">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed top-0 w-100 z-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./img/達摩logo.png" alt="logo" height="30"> | 瞇那賞</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link " href="index.html">首頁</a></li>
+          <li class="nav-item"><a class="nav-link active" href="LuckyDraw_Ellie_News.html">最新消息</a></li>
+          <li class="nav-item"><a class="nav-link " href="ProductList.html">產品列表</a></li>
+          <li class="nav-item"><a class="nav-link" href="Discusstion.html">盲盒討論區</a></li>
+          <li class="nav-item"><a class="nav-link " href="Share.html">用戶曬單</a></li>
+          <li class="nav-item"><a class="nav-link" href="MemberCenter.html">個人中心</a></li>
+          <li class="nav-item"><a class="nav-link" href="FaqCenter.html">客服</a></li>
+        </ul>
+
+
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-warning" href="#">儲值</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" style="cursor: pointer;">登入</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">註冊</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- 麵包屑
+    <div class="p-4">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb ">
+                <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                <li class="breadcrumb-item active" aria-current="page">最新消息</li>
+            </ol>
+        </nav>
+    </div> -->
+
+
+  <!-- main -->
+  <main class="flex-shrink-0 container mb-3 z-1" style="margin-top: 90px!important;">
+
+    <!-- 人氣商品 -->
+
+    <!-- 新品預告 -->
+    <div class="layout bg-light p-3 mb-3">
+      <!-- 標題列 -->
+      <div class="d-flex mb-3 border-bottom border-primary border-1">
+        <!-- 標題圖示 -->
+        <span class="icon ms-2">
+          <svg width="24" height="24" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="6" width="20" height="2" />
+            <rect x="2" y="8" width="2" height="4" />
+            <rect x="2" y="12" width="20" height="2" />
+            <rect x="20" y="8" width="2" height="4" />
+            <rect x="6" y="4" width="2" height="2" />
+            <rect x="8" y="2" width="3" height="2" />
+            <rect x="11" y="4" width="2" height="2" />
+            <rect x="13" y="2" width="3" height="2" />
+            <rect x="16" y="4" width="2" height="2" />
+            <rect x="4" y="14" width="2" height="6" />
+            <rect x="4" y="20" width="16" height="2" />
+            <rect x="18" y="14" width="2" height="6" />
+            <rect x="11" y="8" width="2" height="4" />
+            <rect x="11" y="14" width="2" height="6" />
+          </svg>
+        </span>
+        <!-- 標題 -->
+        <span class="title fs-4 fw-bolder ms-2">
+          新品上市
+        </span>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="product-slider d-flex">
+
+              <div class="slide-item d-flex justify-content-center mx-3">
+                <div class="slide-inner rounded-3 overflow-hidden d-flex justify-content-center">
+                  <img src="https://img.91toy.com.tw/img/product_pic2/202407/66a8a49f57ed9.webp" class="img-fluid">
+                  <!-- 標籤 -->
+                  <span class="badge bg-secondary position-absolute end-0 top-0 m-3 fs-lg-5 fs-md-5 fs-sm-3">
+                    New !
+                  </span>
+                </div>
+              </div>
+              <div class="slide-item d-flex justify-content-center mx-3">
+                <div class="slide-inner rounded-3 overflow-hidden d-flex justify-content-center">
+                  <img src="https://img.91toy.com.tw/img/product_pic2/202505/68258c1f86eb2.webp" class="img-fluid">
+                </div>
+              </div>
+              <div class="slide-item d-flex justify-content-center mx-3">
+                <div class="slide-inner rounded-3 overflow-hidden d-flex justify-content-center">
+                  <img src="https://img.91toy.com.tw/img/product_pic2/202504/6811dc17e437c.webp" class="img-fluid">
+                </div>
+              </div>
+              <div class="slide-item d-flex justify-content-center mx-3">
+                <div class="slide-inner rounded-3 overflow-hidden d-flex justify-content-center">
+                  <img src="https://img.91toy.com.tw/img/product_pic/2018053017413400.jpg" class="img-fluid">
+                </div>
+              </div>
+              <div class="slide-item d-flex justify-content-center mx-3">
+                <div class="slide-inner rounded-3 overflow-hidden d-flex justify-content-center">
+                  <img src="https://img.91toy.com.tw/img/product_pic2/202306/648d74e7781ac.webp" class="img-fluid">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+
+    <!-- 活動消息 -->
+    <div class="layout bg-light p-3 mb-3">
+      <!-- 標題列 -->
+      <div class="d-flex mb-3 border-bottom border-primary border-1">
+        <!-- 標題圖示 -->
+        <span class="icon ms-2">
+          <svg width="24" height="24" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="6" width="20" height="2" />
+            <rect x="2" y="8" width="2" height="4" />
+            <rect x="2" y="12" width="20" height="2" />
+            <rect x="20" y="8" width="2" height="4" />
+            <rect x="6" y="4" width="2" height="2" />
+            <rect x="8" y="2" width="3" height="2" />
+            <rect x="11" y="4" width="2" height="2" />
+            <rect x="13" y="2" width="3" height="2" />
+            <rect x="16" y="4" width="2" height="2" />
+            <rect x="4" y="14" width="2" height="6" />
+            <rect x="4" y="20" width="16" height="2" />
+            <rect x="18" y="14" width="2" height="6" />
+            <rect x="11" y="8" width="2" height="4" />
+            <rect x="11" y="14" width="2" height="6" />
+          </svg>
+        </span>
+        <!-- 標題 -->
+        <span class="title fs-4 fw-bolder ms-2">
+          活動消息
+        </span>
+      </div>
+      <div class="container">
+        <div class="row px-3">
+          <div class="col-lg-3 col-md-6 col-sm-6 d-flex justify-content-center p-3">
+            <div class="card w-100">
+              <img src="https://placecats.com/300/200" class="card-img-top" alt="...">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">現在加入抽好禮!</h5>
+                <p class="card-text">
+                  現在加入LuckyDraw會員，即可參加抽獎！
+                </p>
+                <a href="#" class="btn btn-primary mt-auto ms-auto">
+                  詳細內容
+                  <i class="bi bi-arrow-right-short"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6  d-flex justify-content-center p-3">
+            <div class="card w-100">
+              <img src="https://placecats.com/300/200" class="card-img-top" alt="...">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">現在加入抽好禮!</h5>
+                <p class="card-text">
+                  現在加入LuckyDraw會員，即可參加抽獎！
+                </p>
+                <a href="#" class="btn btn-primary mt-auto ms-auto">
+                  詳細內容
+                  <i class="bi bi-arrow-right-short"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6  d-flex justify-content-center p-3">
+            <div class="card w-100">
+              <img src="https://placecats.com/300/200" class="card-img-top" alt="...">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">現在加入抽好禮!</h5>
+                <p class="card-text">
+                  現在加入LuckyDraw會員，即可參加抽獎！
+                </p>
+                <a href="#" class="btn btn-primary mt-auto ms-auto">
+                  詳細內容
+                  <i class="bi bi-arrow-right-short"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6  d-flex justify-content-center p-3">
+            <div class="card w-100">
+              <img src="https://placecats.com/300/200" class="card-img-top" alt="...">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">LuckyDraw熱情招商中!</h5>
+                <p class="card-text">
+                  想要讓更多人看到你們精心挑選的商品嗎？<br>歡迎聯絡我們！
+                </p>
+                <a href="#" class="btn btn-primary mt-auto ms-auto">
+                  詳細內容
+                  <i class="bi bi-arrow-right-short"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 網站更新 -->
+    <div class="layout bg-light p-3 mb-3">
+      <!-- 標題列 -->
+      <div class="d-flex mb-3 border-bottom border-primary border-1">
+        <!-- 標題圖示 -->
+        <span class="icon ms-2">
+          <svg width="24" height="24" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="6" width="20" height="2" />
+            <rect x="2" y="8" width="2" height="4" />
+            <rect x="2" y="12" width="20" height="2" />
+            <rect x="20" y="8" width="2" height="4" />
+            <rect x="6" y="4" width="2" height="2" />
+            <rect x="8" y="2" width="3" height="2" />
+            <rect x="11" y="4" width="2" height="2" />
+            <rect x="13" y="2" width="3" height="2" />
+            <rect x="16" y="4" width="2" height="2" />
+            <rect x="4" y="14" width="2" height="6" />
+            <rect x="4" y="20" width="16" height="2" />
+            <rect x="18" y="14" width="2" height="6" />
+            <rect x="11" y="8" width="2" height="4" />
+            <rect x="11" y="14" width="2" height="6" />
+          </svg>
+        </span>
+        <!-- 標題 -->
+        <span class="title fs-4 fw-bolder ms-2">
+          網站更新
+        </span>
+      </div>
+      <div class="mx-3">
+        <ul class="list-group list-group-flush">
+
+          <li class="list-group-item d-flex justify-content-between align-items-center ">
+            <div>
+              <span>
+                <i class="bi bi-arrow-bar-up"></i>
+              </span>
+              <span>
+                新增linePay儲值功能
+              </span>
+            </div>
+            <span class="updateday">2026/03/14</span>
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <span>
+                <i class="bi bi-arrow-bar-up"></i>
+              </span>
+              <span>
+                新增信用卡儲值功能
+              </span>
+            </div>
+            <span class="updateday">2026/03/10</span>
+          </li>
+
+          <li class="list-group-item  d-flex justify-content-between align-items-center">
+            <div>
+              <span>
+                <i class="bi bi-arrow-bar-up"></i>
+              </span>
+              <span>
+                新增ATM轉帳儲值功能
+              </span>
+            </div>
+            <span class="updateday">2026/03/09</span>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+
+
+  </main>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold" id="loginModalLabel">會員登入</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-4">
+          <form action="" method="post" class="needs-validation" novalidate>
+            <div class="mb-4">
+              <label for="account" class="form-label text-secondary small">帳號</label>
+              <input type="text" id="account" name="account" class="form-control" placeholder="請輸入電子郵件" required>
+              <div class="invalid-feedback">
+                請輸入電子郵件
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="password" class="form-label text-secondary small">密碼</label>
+              <input type="password" id="password" name="password" class="form-control" placeholder="請輸入密碼" required>
+              <div class="invalid-feedback">
+                請輸入密碼
+              </div>
+            </div>
+
+            <div class="mt-5 mb-2">
+              <input type="submit" value="登入" class="btn btn-danger w-100 py-2 fw-bold">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold text-center w-100" id="registerModalLabel">會員註冊</h5>
+          <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-4 px-4 pb-4">
+
+          <div class="mb-4">
+            <button class="btn btn-email-register w-100 mb-3 d-flex align-items-center justify-content-center py-2 fw-bold text-white fs-5">
+              <i class="bi bi-envelope-fill me-3"></i> 使用電子郵件註冊
+            </button>
+            <button class="btn btn-apple w-100 mb-3 d-flex align-items-center justify-content-center py-2 fw-bold">
+              <i class="bi bi-apple me-3 fs-5"></i> 使用 Apple 註冊
+            </button>
+            <button class="btn btn-google w-100 mb-4 d-flex align-items-center justify-content-center py-2 fw-bold">
+              <img src="https://auth.services.adobe.com/img/social/google_idp.svg" alt="google" width="18" height="18" class="me-3"> 使用 Google 註冊
+            </button>
+          </div>
+
+          <div class="mb-4">
+            <select class="form-select w-100 border-secondary-subtle py-2" aria-label="輸入邀請碼">
+              <option selected disabled>輸入邀請碼</option>
+              <option value="1">活動代碼：VIP2026</option>
+              <option value="2">好友推薦碼</option>
+            </select>
+          </div>
+
+          <div class="text-center small text-secondary">
+            註冊成為會員即表示您同意<a href="#" class="text-decoration-none text-danger">使用條款</a>和<a href="#" class="text-decoration-none text-danger">隱私權政策</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="bg-dark text-white pt-5 pb-3 mt-auto z-2 position-relative">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <img src="./img/達摩logo.png" alt="logo" height="50" class="mb-3">
+          <p class="small text-secondary">官方LINE：@iSpan<br>客服信箱：iSapn@gmail.com<br>公司名稱：iSpan工作室</p>
+        </div>
+        <div class="col-md-4 mb-4 d-flex justify-content-md-center">
+          <ul class="list-unstyled">
+            <li class=""><a class="nav-link" href="index.html">首頁</a></li>
+            <li class=""><a class="nav-link" href="LuckyDraw_Ellie_News.html">最新消息</a></li>
+            <li class=""><a class="nav-link" href="ProductList.html">產品列表</a></li>
+            <li class=""><a class="nav-link" href="Discusstion.html">盲盒討論區</a></li>
+            <li class=""><a class="nav-link " href="Share.html">用戶曬單</a></li>
+            <li class=""><a class="nav-link" href="MemberCenter.html">個人中心</a></li>
+            <li class=""><a class="nav-link " href="FaqCenter.html">客服</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4 text-md-end">
+          <div class="mb-3">
+            <i class="bi bi-line fs-3 me-2 text-success"></i>
+            <i class="bi bi-facebook fs-3 me-2 text-primary"></i>
+            <i class="bi bi-instagram fs-3 text-danger"></i>
+          </div>
+          <p class="small text-secondary mt-3">© 2026 Copyright 版權所有</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+
+  <!-- slick -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- slick js -->
+  <script>
+    $(document).ready(function() {
+
+      const bp = {
+        sm: 576,
+        md: 768,
+        lg: 992,
+        xl: 1200
+      };
+
+      $('.product-slider').slick({
+        arrows: false, // 隱藏箭頭
+        dots: true, // 顯示圓點
+        infinite: true, // 無限循環
+        speed: 300,
+        slidesToShow: 3, // 最大顯示 3 個
+        slidesToScroll: 1,
+        autoplay: true,
+        centerMode: true,
+        centerPadding: '0px',
+
+
+        responsive: [{
+            breakpoint: bp.xl,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: bp.lg,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: bp.md,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: bp.sm,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+
+    });
+  </script>
+</body>
+
+</html>

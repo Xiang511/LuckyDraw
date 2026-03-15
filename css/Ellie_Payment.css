@@ -1,0 +1,68 @@
+/* 使body=瀏覽器高度 */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #081324 !important;
+
+}
+
+/* ====== */
+
+/* ====== */
+
+.layout {
+    border-radius: 30px;
+}
+
+.icon {
+    color: rgb(97, 61, 228);
+}
+
+.sidebar {
+    border-radius: 15px;
+    background-color: lightgray;
+}
+
+.mainContent {
+    border-radius: 15px;
+    border: 1px solid grey;
+}
+
+.updateday {
+    color: gray;
+    font-size: 12px;
+}
+
+/* ====== */
+
+/* ===麵包屑=== */
+.breadcrumb-item.active {
+    color: cadetblue;
+    font-weight: bolder;
+}
+
+.breadcrumb-item a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+/* 麵包屑的>符號 */
+.breadcrumb-item+.breadcrumb-item::before {
+    color: cadetblue;
+}
+
+/* ====== */
+
+/* ===sidebar=== */
+/* .nav-link {
+            border-radius: 8px;
+        } */
+
+.nav-link:hover {
+    background: #f2f2f2;
+}
+
+/* ====== */

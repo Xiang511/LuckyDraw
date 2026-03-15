@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard-Member</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+</head>
+
+<body class="vh-100 ">
+  <div class="row d-flex w-100 m-0 flex-nowrap overflow-x-hidden overflow-y-auto">
+    <div class="row vh-100 d-none col-md-4 col-lg-3 col-xl-2 d-xl-flex m-0  p-0 " id="nav">
+      <nav class="navbg border p-0 flex-shrink-0 border-0">
+        <div class="py-3 mt-3 w-100">
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="https://picsum.photos/id/492/150/150" alt="">
+          </div>
+          <ul class="text-white fs-4 w-100 d-flex flex-column justify-content-center gap-3 mt-5 p-0">
+            <a class="text-decoration-none text-white" href="Member.html">
+              <li class="text-center p-3"><i class="bi bi-person-circle me-3"></i>會員管理</li>
+            </a>
+            <a class="text-decoration-none text-white" href="ProductManagement.html">
+              <li class="text-center p-3"><i class="bi bi-box-seam me-3"></i>商品管理</li>
+            </a>
+            <a class="text-decoration-none text-white" href="OrderManagement.html">
+              <li class="text-center p-3"><i class="bi bi-card-checklist me-3"></i>訂單管理</li>
+            </a>
+            <a class="text-decoration-none text-white" href="DataAnalysis.html">
+              <li class="text-center p-3"><i class="bi bi-percent me-3"></i>數據統計</li>
+            </a>
+            <a class="text-decoration-none text-white" href="LuckyDraw_Ellie_Sales.html">
+              <li class="text-center p-3"><i class="bi bi-columns me-3"></i>活動促銷</li>
+            </a>
+            <a class="text-decoration-none text-white" href="SystemSetting.html">
+              <li class="text-center p-3"><i class="bi bi-gear me-3"></i>系統設定</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="text-black col-12 col-xl-10 p-0 m-0  border-0 position-relative">
+      <div class="d-flex justify-content-between  text-white navbg align-items-center py-1 px-2  top-0 position-fixed  z-1" style="width: inherit;">
+        <div>
+          <button class="btn text-white d-xl-none" type="button" id="btn">
+            <i class="bi bi-list  fs-4 pe-2"></i>
+          </button>
+          <p class="d-inline-block m-0 fw-bold">後台管理系統</p>
+        </div>
+        <div class="m-0 d-flex align-items-center z-1">
+          <img class="rounded-circle me-3" src="https://picsum.photos/id/701/40/40" alt="">
+          <p class="d-inline-block mt-3 me-2">管理員</p>
+          <button class="btn bg-light rounded-0 ">登出</button>
+        </div>
+      </div>
+      <div class="row bg-white p-0 m-0 vh-100 overflow-y-auto">
+        <div class="col-12 p-4 " style="margin-top: 5em; ">
+          <!-- 修改自己的title -->
+          <h2 class="mb-4 fs-1">會員管理</h2>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="請輸入要查詢的內容" aria-label="請輸入要查詢的內容" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary z-0" type="button" id="button-addon2">搜尋</button>
+          </div>
+          <!-- 這裡可以放你的東西 以下範例-->
+          <!-- <div class="row">
+            <div class="col-12">content</div>
+          </div> -->
+        </div>
+        <div class="col-12 p-4 ">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">姓名</th>
+                <th scope="col">電子郵件</th>
+                <th scope="col">註冊日期</th>
+                <th scope="col">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>王小明</td>
+                <td>wangxiaoming@example.com</td>
+                <td>2024-01-15</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>李佳琪</td>
+                <td>lijiaqi@example.com</td>
+                <td>2024-01-18</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>張偉強</td>
+                <td>zhangweiqiang@example.com</td>
+                <td>2024-02-03</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>陳美玲</td>
+                <td>chenmeiling@example.com</td>
+                <td>2024-02-10</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>林志豪</td>
+                <td>linzhihao@example.com</td>
+                <td>2024-02-15</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>黃淑芬</td>
+                <td>huangshufen@example.com</td>
+                <td>2024-02-20</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>周俊傑</td>
+                <td>zhoujunjie@example.com</td>
+                <td>2024-02-25</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>吳雅婷</td>
+                <td>wuyating@example.com</td>
+                <td>2024-03-01</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>鄭文博</td>
+                <td>zhengwenbo@example.com</td>
+                <td>2024-03-05</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>劉思涵</td>
+                <td>liusihan@example.com</td>
+                <td>2024-03-08</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>蔡宗翰</td>
+                <td>caizonghan@example.com</td>
+                <td>2024-03-12</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>許雅雯</td>
+                <td>xuyawen@example.com</td>
+                <td>2024-03-15</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>楊建宏</td>
+                <td>yangjianhong@example.com</td>
+                <td>2024-03-20</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>賴佩君</td>
+                <td>laipeijun@example.com</td>
+                <td>2024-03-22</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>謝宇軒</td>
+                <td>xieyuxuan@example.com</td>
+                <td>2024-03-25</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>郭欣怡</td>
+                <td>guoxinyi@example.com</td>
+                <td>2024-04-01</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>何冠宇</td>
+                <td>heguanyu@example.com</td>
+                <td>2024-04-05</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>曾詩涵</td>
+                <td>zengshihan@example.com</td>
+                <td>2024-04-10</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>羅健豪</td>
+                <td>luojianhao@example.com</td>
+                <td>2024-04-15</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>梁思婷</td>
+                <td>liangsiting@example.com</td>
+                <td>2024-04-18</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>馬俊宏</td>
+                <td>majunhong@example.com</td>
+                <td>2024-04-22</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td>孫婉婷</td>
+                <td>sunwanting@example.com</td>
+                <td>2024-04-25</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td>蔣哲維</td>
+                <td>jiangzhewei@example.com</td>
+                <td>2024-05-01</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>24</td>
+                <td>顏嘉玲</td>
+                <td>yanjialing@example.com</td>
+                <td>2024-05-05</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>25</td>
+                <td>范明翰</td>
+                <td>fanminghan@example.com</td>
+                <td>2024-05-08</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>26</td>
+                <td>潘雅筑</td>
+                <td>panyazhu@example.com</td>
+                <td>2024-05-12</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>27</td>
+                <td>董承翰</td>
+                <td>dongchenghan@example.com</td>
+                <td>2024-05-15</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>28</td>
+                <td>姚詩涵</td>
+                <td>yaoshihan@example.com</td>
+                <td>2024-05-20</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td>袁文宏</td>
+                <td>yuanwenhong@example.com</td>
+                <td>2024-05-22</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td>30</td>
+                <td>康雅婷</td>
+                <td>kangyating@example.com</td>
+                <td>2024-05-25</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">編輯</button>
+                  <button class="btn btn-danger btn-sm">刪除</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        </div>
+        <!-- <div class="row">
+          <div class="col-12">lorem</div>
+        </div> <div class="row">
+          <div class="col-12">lorem</div>
+        </div>  -->
+       
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

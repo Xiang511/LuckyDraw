@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard-SystemSetting</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+</head>
+
+<body class="vh-100 ">
+  <div class="row d-flex w-100 m-0 flex-nowrap overflow-x-hidden overflow-y-auto">
+    <div class="row vh-100 d-none col-md-4 col-lg-3 col-xl-2 d-xl-flex m-0  p-0 " id="nav">
+      <nav class="navbg border p-0 flex-shrink-0 border-0">
+        <div class="py-3 mt-3 w-100">
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="https://picsum.photos/id/492/150/150" alt="">
+          </div>
+          <ul class="text-white fs-4 w-100 d-flex flex-column justify-content-center gap-3 mt-5 p-0">
+            <a class="text-decoration-none text-white" href="Member.html">
+              <li class="text-center p-3"><i class="bi bi-person-circle me-3"></i>會員管理</li>
+            </a>
+            <a class="text-decoration-none text-white" href="ProductManagement.html">
+              <li class="text-center p-3"><i class="bi bi-box-seam me-3"></i>商品管理</li>
+            </a>
+            <a class="text-decoration-none text-white" href="OrderManagement.html">
+              <li class="text-center p-3"><i class="bi bi-card-checklist me-3"></i>訂單管理</li>
+            </a>
+            <a class="text-decoration-none text-white" href="DataAnalysis.html">
+              <li class="text-center p-3"><i class="bi bi-percent me-3"></i>數據統計</li>
+            </a>
+            <a class="text-decoration-none text-white" href="LuckyDraw_Ellie_Sales.html">
+              <li class="text-center p-3"><i class="bi bi-columns me-3"></i>活動促銷</li>
+            </a>
+            <a class="text-decoration-none text-white" href="SystemSetting.html">
+              <li class="text-center p-3"><i class="bi bi-gear me-3"></i>系統設定</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="text-black col-12 col-xl-10 p-0 m-0  border-0 position-relative">
+      <div class="d-flex justify-content-between  text-white navbg align-items-center py-1 px-2  top-0 position-fixed  z-1" style="width: inherit;">
+        <div>
+          <button class="btn text-white d-xl-none" type="button" id="btn">
+            <i class="bi bi-list  fs-4 pe-2"></i>
+          </button>
+          <p class="d-inline-block m-0 fw-bold">後台管理系統</p>
+        </div>
+        <div class="m-0 d-flex align-items-center z-1">
+          <img class="rounded-circle me-3" src="https://picsum.photos/id/701/40/40" alt="">
+          <p class="d-inline-block mt-3 me-2">管理員</p>
+          <button class="btn bg-light rounded-0 ">登出</button>
+        </div>
+      </div>
+      <div class="row bg-white p-0 m-0 vh-100 overflow-y-auto">
+        <div class="col-12 p-4 " style="margin-top: 5em; ">
+          <h2 class="mb-4 fs-1">系統設定</h2>
+
+          <!-- 網站基本設定 -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <label for="siteName" class="form-label">網站名稱</label>
+                  <input type="text" class="form-control" id="siteName" value="LuckyDraw 抽獎系統">
+                </div>
+                <div class="mb-3">
+                  <label for="siteDescription" class="form-label">網站描述</label>
+                  <textarea class="form-control" id="siteDescription" rows="3">提供最公平、最有趣的線上抽獎服務</textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="siteUrl" class="form-label">網站網址</label>
+                  <input type="url" class="form-control" id="siteUrl" value="https://www.luckydraw.com">
+                </div>
+                <div class="mb-3">
+                  <label for="contactEmail" class="form-label">聯絡信箱</label>
+                  <input type="email" class="form-control" id="contactEmail" value="contact@luckydraw.com">
+                </div>
+                <div class="mb-3">
+                  <label for="siteLogo" class="form-label">網站 Logo</label>
+                  <input type="file" class="form-control" id="siteLogo" accept="image/*">
+                  <small class="text-muted">建議尺寸：200 x 200 像素</small>
+                </div>
+                <button type="submit" class="btn btn-primary">儲存變更</button>
+              </form>
+            </div>
+          </div>
+
+
+          <!-- 通知設定 -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">郵件通知</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="notifyNewUser" checked>
+                    <label class="form-check-label" for="notifyNewUser">
+                      新用戶註冊通知
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="notifyNewOrder" checked>
+                    <label class="form-check-label" for="notifyNewOrder">
+                      新訂單通知
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="notifySystemError" checked>
+                    <label class="form-check-label" for="notifySystemError">
+                      系統錯誤通知
+                    </label>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">會員通知</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="memberWelcomeEmail" checked>
+                    <label class="form-check-label" for="memberWelcomeEmail">
+                      發送歡迎郵件給新會員
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="memberNewsLetter">
+                    <label class="form-check-label" for="memberNewsLetter">
+                      定期發送電子報
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="memberPromotion" checked>
+                    <label class="form-check-label" for="memberPromotion">
+                      促銷活動通知
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">儲存變更</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- 維護模式 -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="maintenanceMode">
+                    <label class="form-check-label" for="maintenanceMode">
+                      <strong>啟用維護模式</strong>
+                    </label>
+                  </div>
+                  <small class="text-danger">啟用後，網站將暫時無法訪問（管理員除外）</small>
+                </div>
+                <div class="mb-3">
+                  <label for="maintenanceMessage" class="form-label">維護訊息</label>
+                  <textarea class="form-control" id="maintenanceMessage" rows="3">網站正在維護中，預計將於 2 小時後恢復正常，造成不便敬請見諒。</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">儲存變更</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- 系統資訊 -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <th style="width: 200px;">系統版本</th>
+                    <td>LuckyDraw v1.0.1</td>
+                  </tr>
+                  <tr>
+                    <th>資料庫版本</th>
+                    <td>MSSQL Server 2022</td>
+                  </tr>
+                  <tr>
+                    <th>伺服器環境</th>
+                    <td>Apache/2.4.54 (Windows)</td>
+                  </tr>
+                  <tr>
+                    <th>上次更新時間</th>
+                    <td>2026-03-10 14:30:00</td>
+                  </tr>
+                  <tr>
+                    <th>儲存空間使用</th>
+                    <td>
+                      <div class="progress" style="height: 25px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35%</div>
+                      </div>
+                      <small class="text-muted">已使用 3.5 GB / 10 GB</small>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
