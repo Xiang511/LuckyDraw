@@ -2,473 +2,317 @@
 <html lang="en" class="h-100">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>產品列表|LuckyDraw</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>產品列表|LuckyDraw</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-
-    <link rel="stylesheet" href="./css/ProductList.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
 
-    <!-- <style>
-        body {
-            background-color: #0d0216;
-            color: #ffffff;
-            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
-        }
+  <link rel="stylesheet" href="./css/ProductList.css">
 
-        .cyber-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: none;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, background 0.3s;
-            margin: 10px;
-            padding: 1rem;
-            border-top: 3px solid var(--glow-clr, #fff);
-            box-shadow: 0 0 15px rgba(var(--glow-rgb), 0.3);
-            overflow: hidden;
-            margin: 20px;
-        }
-
-        .cyber-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .cyber-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-            display: block;
-        }
-
-        .cyber-card:hover img {
-            transform: scale(1.1);
-        }
-
-
-        .glow-red {
-            --glow-clr: #ff0000;
-            --glow-rgb: 255, 0, 0;
-        }
-
-        .glow-orange {
-            --glow-clr: #ffa500;
-            --glow-rgb: 255, 165, 0;
-        }
-
-        .glow-yellow {
-            --glow-clr: #ffff00;
-            --glow-rgb: 255, 255, 0;
-        }
-
-        .glow-green {
-            --glow-clr: #00ff00;
-            --glow-rgb: 0, 255, 0;
-        }
-
-        .glow-cyan {
-            --glow-clr: #00ffff;
-            --glow-rgb: 0, 255, 255;
-        }
-
-        .glow-blue {
-            --glow-clr: #0000ff;
-            --glow-rgb: 0, 0, 255;
-        }
-
-        .glow-purple {
-            --glow-clr: #800080;
-            --glow-rgb: 128, 0, 128;
-        }
-
-        .glow-pink {
-            --glow-clr: #ff007f;
-            --glow-rgb: 255, 0, 127;
-        }
-
-
-        .product-link {
-            text-decoration: none;
-            color: white;
-        }
-
-        .product-title {
-            font-size: 30px;
-            font-weight: bold;
-            margin-top: 10px;
-            display: block;
-        }
-
-        .overlay {
-            opacity: 0;
-            transition: .3s all;
-            font-size: 2rem;
-            font-weight: 900;
-            letter-spacing: 5px;
-        }
-
-        .position-relative:hover .overlay {
-            opacity: 0.8;
-        }
-
-        .navbg {
-            background-color: #1a1a1a;
-            border-right: 1px solid #333;
-        }
-
-        .btn-cyber {
-            background: white;
-            color: black;
-            border-radius: 5px;
-            font-weight: bold;
-            border: none;
-            padding: 5px 15px;
-        }
-
-        .breadcrumb-item a {
-            color: #00aaff;
-            text-decoration: none;
-        }
-
-        .breadcrumb-item.active {
-            color: #ff007f;
-        }
-
-        .cyber-card .price-tag {
-            font-size: 24px;
-            font-weight: bold;
-            display: block;
-            margin-top: 30px;
-        }
-
-        .cyber-card .position-relative {
-            height: 400px;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .position-relative.overflow-hidden {
-            border-radius: 10px;
-            background: rgba(0, 0, 0, 0.2);
-        }
-    </style> -->
 
 </head>
 
 <body class="h-100 d-flex flex-column">
 
-    <img class="position-absolute top-0 w-100 z-0" src="img/bg-top.svg" alt="">
+  <img class="position-absolute top-0 w-100 z-0" src="img/bg-top.svg" alt="">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed top-0 w-100 z-1">
-        <div class="container-fluid margin-top-5">
-            <a class="navbar-brand" href="#"><img src="./img/達摩logo.png" alt="logo" height="30"> | 瞇那賞</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed top-0 w-100 z-1">
+    <div class="container-fluid margin-top-5">
+      <a class="navbar-brand" href="index.html"><img src="./img/達摩logo.png" alt="logo" height="30"> | 瞇那賞</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">首頁</a></li>
-                    <li class="nav-item"><a class="nav-link " href="LuckyDraw_Ellie_News.html">最新消息</a></li>
-                    <li class="nav-item"><a class="nav-link " href="ProductList.html">產品列表</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Discusstion.html">盲盒討論區</a></li>
-                    <li class="nav-item"><a class="nav-link" href="MemberCenter.html">個人中心</a></li>
-                    <li class="nav-item"><a class="nav-link" href="FaqCenter.html">客服</a></li>
-                </ul>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link " href="index.html">首頁</a></li>
+          <li class="nav-item"><a class="nav-link " href="LuckyDraw_Ellie_News.html">最新消息</a></li>
+          <li class="nav-item"><a class="nav-link active" href="ProductList.html">產品列表</a></li>
+          <li class="nav-item"><a class="nav-link" href="Discusstion.html">盲盒討論區</a></li>
+          <li class="nav-item"><a class="nav-link" href="Share.html">用戶曬單</a></li>
+          <li class="nav-item"><a class="nav-link" href="MemberCenter.html">個人中心</a></li>
+          <li class="nav-item"><a class="nav-link" href="FaqCenter.html">客服</a></li>
+        </ul>
 
 
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link text-warning" href="#">儲值</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"
-                            style="cursor: pointer;">登入</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal"
-                            data-bs-target="#registerModal">註冊</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-warning" href="#">儲值</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" style="cursor: pointer;">登入</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">註冊</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <div class="container mt-5 mb-2" style="margin-top: 90px!important;"></div>
+  <div class="container mt-5 mb-2" style="margin-top: 90px!important;"></div>
 
-    <main class="flex-shrink-0">
-
+  <main class="flex-shrink-0">
 
 
 
-        <!-- 1.容器>2.列>3.左欄+右欄>4.列>5.欄>6.連結>7.圖片+文字 -->
-        <!-- .container>.row>.col-12.col-md-4+.col-12.col-md-9>.row>.col-6.col-md-4.mb-4*15>a>img.w-100[src="https://placehold.co/500x500"]+span{商品$$} -->
 
-        <!-- .container>.row>.col-8.offset-2{置中} -->
-        <div class="container">
-            <div class="row">
-                <div class="col-8 offset-2"></div>
-            </div>
-        </div>
+    <!-- 1.容器>2.列>3.左欄+右欄>4.列>5.欄>6.連結>7.圖片+文字 -->
+    <!-- .container>.row>.col-12.col-md-4+.col-12.col-md-9>.row>.col-6.col-md-4.mb-4*15>a>img.w-100[src="https://placehold.co/500x500"]+span{商品$$} -->
 
-
-        <div class="container-fluid px-3">
-            <div class="row g-3 justify-content-center">
-                <div class="col-12 col-md-5"></div>
-                <div class="col-12 col-md-9">
-                    <div class="row">
-
-                        <div class="row g-5">
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-red p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <span
-                                                class="position-absolute badge bg-danger start-0 top-0 m-2 fs-3">New</span>
-                                            <img src="../img/D1.jpg" class="w-100">
-                                            <div
-                                                class="overlay position-absolute bg-dark text-white top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
-                                                MORE</div>
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title">小熊維尼歷險記 極匠系列 維尼與小豬</span>
-                                            <span class="price-tag text-info fs-5">價格：2530元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-orange p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <img src="../img/D2.jpg" class="w-100">
-                                            <div
-                                                class="overlay position-absolute bg-dark text-white top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
-                                                MORE</div>
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title">掌心存錢筒 101忠狗 盲盒單入</span>
-                                            <span class="price-tag text-info fs-5">價格： 500元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-yellow p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <img src="../img/D3.jpg" class="w-100">
-                                            <div
-                                                class="overlay position-absolute bg-dark text-white top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
-                                                MORE</div>
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title">SYAKING存錢筒 三眼怪</span>
-                                            <span class="price-tag text-info fs-5">價格： 2350元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-green p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <img src="../img/D4.jpg" class="w-100">
-                                            <div
-                                                class="overlay position-absolute bg-dark text-white top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
-                                                MORE</div>
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title">玩具總動員 迴力車 盲盒套組 (6入)</span>
-                                            <span class="price-tag text-info fs-5">價格： 1200元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-cyan p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <img src="../img/D5.jpg" class="w-100">
-                                            <div
-                                                class="overlay position-absolute bg-dark text-white top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
-                                                MORE</div>
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title">聖誕夜驚魂系列 盲盒套組 (6入)</span>
-                                            <span class="price-tag text-info fs-5">價格： 3000元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-blue p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <img src="../img/M1.jpg" class="w-100">
-                                            <div
-                                                class="overlay position-absolute bg-dark text-white top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
-                                                MORE</div>
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title">驚奇4超人：第一步 Q版公仔 盲盒套組 (6入)</span>
-                                            <span class="price-tag text-info fs-5">價格： 2200元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-purple p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <img src="../img/M2.jpg" class="w-100">
-                                            <div
-                                                class="overlay position-absolute bg-dark text-white top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
-                                                MORE</div>
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title">漫威爭鋒 絨毛吊飾 盲盒套組 (6入)</span>
-                                            <span class="price-tag text-info fs-5">價格： 2300元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-red p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <img src="../img/M3.jpg" class="w-100">
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title">黑暗騎士三部曲 小丑風格Q版公仔 盲盒單入</span>
-                                            <span class="price-tag text-info fs-5">價格： 1380元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-orange p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <img src="../img/M4.jpg" class="w-100">
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title">漫威漫畫 Q版公仔 騎乘款 盲盒套組 (6入)</span>
-                                            <span class="price-tag text-info fs-5">價格： 1500元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-yellow p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <img src="../img/M5.jpg" class="w-100">
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title">DC漫畫 王國超人 CCXP限定版</span>
-                                            <span class="price-tag text-info fs-5">價格： 2680元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-green p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <img src="../img/S1.jpg" class="w-100">
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title">花生漫畫 絨毛玩偶 - 史努比 盲盒套組 (5入)</span>
-                                            <span class="price-tag text-info fs-5">價格： 1850元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-cyan p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <img src="../img/S2.jpg" class="w-100">
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title">史努比圓滾滾奇幻系列 盲盒單入 (全7種)</span>
-                                            <span class="price-tag text-info fs-5">價格： 300元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-blue p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <img src="../img/S3.jpg" class="w-100">
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title"> 花生系列 史努比特技演員</span>
-                                            <span class="price-tag text-info fs-5">價格： 1550元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-purple p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <img src="../img/S4.jpg" class="w-100">
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title">URDU X PEANUTS 超越世界系列 S4 史努比 盲盒套組 (6入)</span>
-                                            <span class="price-tag text-info fs-5">價格： 2500元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-md-4 mb-4">
-                                <a href="#" class="product-link">
-                                    <div class="cyber-card glow-red p-2 h-100">
-                                        <div class="position-relative overflow-hidden" style="border-radius: 10px;">
-                                            <img src="../img/S5.jpg" class="w-100">
-                                        </div>
-                                        <div class="p-2 text-center">
-                                            <span class="product-title">花生系列 史努比 胡士托的旋轉木馬</span>
-                                            <span class="price-tag text-info fs-5">價格： 650元</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+    <!-- .container>.row>.col-8.offset-2{置中} -->
+    <div class="container">
+      <div class="row">
+        <div class="col-8 offset-2"></div>
+      </div>
+    </div>
 
 
+    <div class="container-fluid px-3">
+      <div class="row g-3 justify-content-center">
+        <div class="col-12 col-md-5"></div>
+        <div class="col-12 col-md-9">
+          <div class="row">
+
+            <div class="row g-5">
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-red p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <span class="position-absolute badge bg-danger start-0 top-0 m-2 fs-3">New</span>
+                      <img src="../img/D1.jpg" class="w-100">
+                      <div class="overlay position-absolute bg-dark text-white top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
+                        MORE</div>
                     </div>
-                </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title">小熊維尼歷險記 極匠系列 維尼與小豬</span>
+                      <span class="price-tag text-info fs-5">價格：2530元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-orange p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <img src="../img/D2.jpg" class="w-100">
+                      <div class="overlay position-absolute bg-dark text-white top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
+                        MORE</div>
+                    </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title">掌心存錢筒 101忠狗 盲盒單入</span>
+                      <span class="price-tag text-info fs-5">價格： 500元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-yellow p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <img src="../img/D3.jpg" class="w-100">
+                      <div class="overlay position-absolute bg-dark text-white top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
+                        MORE</div>
+                    </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title">SYAKING存錢筒 三眼怪</span>
+                      <span class="price-tag text-info fs-5">價格： 2350元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-green p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <img src="../img/D4.jpg" class="w-100">
+                      <div class="overlay position-absolute bg-dark text-white top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
+                        MORE</div>
+                    </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title">玩具總動員 迴力車 盲盒套組 (6入)</span>
+                      <span class="price-tag text-info fs-5">價格： 1200元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-cyan p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <img src="../img/D5.jpg" class="w-100">
+                      <div class="overlay position-absolute bg-dark text-white top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
+                        MORE</div>
+                    </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title">聖誕夜驚魂系列 盲盒套組 (6入)</span>
+                      <span class="price-tag text-info fs-5">價格： 3000元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-blue p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <img src="../img/M1.jpg" class="w-100">
+                      <div class="overlay position-absolute bg-dark text-white top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
+                        MORE</div>
+                    </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title">驚奇4超人：第一步 Q版公仔 盲盒套組 (6入)</span>
+                      <span class="price-tag text-info fs-5">價格： 2200元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-purple p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <img src="../img/M2.jpg" class="w-100">
+                      <div class="overlay position-absolute bg-dark text-white top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
+                        MORE</div>
+                    </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title">漫威爭鋒 絨毛吊飾 盲盒套組 (6入)</span>
+                      <span class="price-tag text-info fs-5">價格： 2300元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-red p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <img src="../img/M3.jpg" class="w-100">
+                    </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title">黑暗騎士三部曲 小丑風格Q版公仔 盲盒單入</span>
+                      <span class="price-tag text-info fs-5">價格： 1380元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-orange p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <img src="../img/M4.jpg" class="w-100">
+                    </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title">漫威漫畫 Q版公仔 騎乘款 盲盒套組 (6入)</span>
+                      <span class="price-tag text-info fs-5">價格： 1500元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-yellow p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <img src="../img/M5.jpg" class="w-100">
+                    </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title">DC漫畫 王國超人 CCXP限定版</span>
+                      <span class="price-tag text-info fs-5">價格： 2680元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-green p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <img src="../img/S1.jpg" class="w-100">
+                    </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title">花生漫畫 絨毛玩偶 - 史努比 盲盒套組 (5入)</span>
+                      <span class="price-tag text-info fs-5">價格： 1850元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-cyan p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <img src="../img/S2.jpg" class="w-100">
+                    </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title">史努比圓滾滾奇幻系列 盲盒單入 (全7種)</span>
+                      <span class="price-tag text-info fs-5">價格： 300元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-blue p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <img src="../img/S3.jpg" class="w-100">
+                    </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title"> 花生系列 史努比特技演員</span>
+                      <span class="price-tag text-info fs-5">價格： 1550元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-purple p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <img src="../img/S4.jpg" class="w-100">
+                    </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title">URDU X PEANUTS 超越世界系列 S4 史努比 盲盒套組 (6入)</span>
+                      <span class="price-tag text-info fs-5">價格： 2500元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-4 mb-4">
+                <a href="#" class="product-link">
+                  <div class="cyber-card glow-red p-2 h-100">
+                    <div class="position-relative overflow-hidden" style="border-radius: 10px;">
+                      <img src="../img/S5.jpg" class="w-100">
+                    </div>
+                    <div class="p-2 text-center">
+                      <span class="product-title">花生系列 史努比 胡士托的旋轉木馬</span>
+                      <span class="price-tag text-info fs-5">價格： 650元</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
+
+
+          </div>
         </div>
+      </div>
+    </div>
 
-    </main>
+  </main>
 
 
-    <!-- footer -->
-   <footer class="bg-dark text-white pt-5 pb-3 mt-auto">
+  <!-- footer -->
+  <footer class="bg-dark text-white pt-5 pb-3 mt-auto z-2 position-relative">
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-4">
@@ -477,12 +321,13 @@
         </div>
         <div class="col-md-4 mb-4 d-flex justify-content-md-center">
           <ul class="list-unstyled">
-            <li class=""><a class="nav-link active" href="index.html">首頁</a></li>
-            <li class=""><a class="nav-link " href="LuckyDraw_Ellie_News.html">最新消息</a></li>
-            <li class=""><a class="nav-link " href="ProductList.html">產品列表</a></li>
+            <li class=""><a class="nav-link" href="index.html">首頁</a></li>
+            <li class=""><a class="nav-link" href="LuckyDraw_Ellie_News.html">最新消息</a></li>
+            <li class=""><a class="nav-link" href="ProductList.html">產品列表</a></li>
             <li class=""><a class="nav-link" href="Discusstion.html">盲盒討論區</a></li>
+            <li class=""><a class="nav-link " href="Share.html">用戶曬單</a></li>
             <li class=""><a class="nav-link" href="MemberCenter.html">個人中心</a></li>
-            <li class=""><a class="nav-link" href="FaqCenter.html">客服</a></li>
+            <li class=""><a class="nav-link " href="FaqCenter.html">客服</a></li>
           </ul>
         </div>
         <div class="col-md-4 mb-4 text-md-end">
@@ -496,55 +341,121 @@
       </div>
     </div>
   </footer>
+  <!-- a[href='#'].bg-dark.text-white.p-3.position-fiixed.end-0.bottom-0.m-1.text-decoration-none{TOP} -->
+  <a href="#" class="bg-dark text-white p-3 position-fixed end-0 bottom-0 m-1 text-decoration-none">TOP</a>
 
-    <!-- a[href='#'].bg-dark.text-white.p-3.position-fiixed.end-0.bottom-0.m-1.text-decoration-none{TOP} -->
-    <a href="#" class="bg-dark text-white p-3 position-fixed end-0 bottom-0 m-1 text-decoration-none">TOP</a>
 
-
-    <!-- Modal(登入點選視窗出現) -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+  <!-- Modal(登入點選視窗出現) -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold" id="loginModalLabel">會員登入</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-4">
+          <form action="" method="post" class="needs-validation" novalidate>
+            <div class="mb-4">
+              <label for="account" class="form-label text-secondary small">帳號</label>
+              <input type="text" id="account" name="account" class="form-control" placeholder="請輸入電子郵件" required>
+              <div class="invalid-feedback">
+                請輸入電子郵件
+              </div>
             </div>
-        </div>
-    </div>
-
-
-    <!-- Offcanvas(購物車點選側邊欄動態出現樣式) -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">購物車</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div>
-                <p class="text-center">目前尚無資料</p>
+            <div class="mb-4">
+              <label for="password" class="form-label text-secondary small">密碼</label>
+              <input type="password" id="password" name="password" class="form-control" placeholder="請輸入密碼" required>
+              <div class="invalid-feedback">
+                請輸入密碼
+              </div>
             </div>
-            <a href="" class="btn btn-primary">前往購物車</a>
-            <a href="" class="btn btn-outline-primary">繼續選購</a>
+
+            <div class="mt-5 mb-2">
+              <input type="submit" value="登入" class="btn btn-danger w-100 py-2 fw-bold">
+            </div>
+          </form>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold text-center w-100" id="registerModalLabel">會員註冊</h5>
+          <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-4 px-4 pb-4">
+
+          <div class="mb-4">
+            <button class="btn btn-email-register w-100 mb-3 d-flex align-items-center justify-content-center py-2 fw-bold text-white fs-5">
+              <i class="bi bi-envelope-fill me-3"></i> 使用電子郵件註冊
+            </button>
+            <button class="btn btn-apple w-100 mb-3 d-flex align-items-center justify-content-center py-2 fw-bold">
+              <i class="bi bi-apple me-3 fs-5"></i> 使用 Apple 註冊
+            </button>
+            <button class="btn btn-google w-100 mb-4 d-flex align-items-center justify-content-center py-2 fw-bold">
+              <img src="https://auth.services.adobe.com/img/social/google_idp.svg" alt="google" width="18" height="18" class="me-3"> 使用 Google 註冊
+            </button>
+          </div>
+
+          <div class="mb-4">
+            <select class="form-select w-100 border-secondary-subtle py-2" aria-label="輸入邀請碼">
+              <option selected disabled>輸入邀請碼</option>
+              <option value="1">活動代碼：VIP2026</option>
+              <option value="2">好友推薦碼</option>
+            </select>
+          </div>
+
+          <div class="text-center small text-secondary">
+            註冊成為會員即表示您同意<a href="#" class="text-decoration-none text-danger">使用條款</a>和<a href="#" class="text-decoration-none text-danger">隱私權政策</a>
+          </div>
+
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Offcanvas(購物車點選側邊欄動態出現樣式) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">購物車</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <p class="text-center">目前尚無資料</p>
+      </div>
+      <a href="" class="btn btn-primary">前往購物車</a>
+      <a href="" class="btn btn-outline-primary">繼續選購</a>
+    </div>
+  </div>
+  </div>
 
 
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-    <script src="./js/script.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
